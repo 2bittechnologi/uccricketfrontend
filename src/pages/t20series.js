@@ -20,7 +20,7 @@ const T20Series = () => {
   return (
     <Layout>
       <section className="bg-[#0E2149]">
-        <div className="lg:w-[1000px] mx-auto text-white md:pt-10 pt-5 pb-10">
+        <div className="lg:w-[1000px] mx-auto text-white  pt-5 pb-10" style={{ paddingTop: "37px" }}>
           <div className="flex items-center justify-between md:p-4 max-w-6xl mx-auto">
             {/* Left Arrow */}
             <button className="md:block hidden p-2 bg-gray-700 rounded-full hover:bg-gray-600">
@@ -244,9 +244,9 @@ const T20Series = () => {
         <div id="tab-content">
           {/* More Info Tab */}
           <div id="info"
-          //  className="tab-content"
-           className={`tab-content ${activeTab === 'info' ? '' : 'hidden'}`}
-           >
+            //  className="tab-content"
+            className={`tab-content ${activeTab === 'info' ? '' : 'hidden'}`}
+          >
             <div className="md:grid grid-cols-12 gap-4">
               <div className="lg:col-span-8 md:col-span-7">
                 <div className="rounded-lg bg-white">
@@ -1480,30 +1480,30 @@ const T20Series = () => {
           </div>
           {/* Live Tab */}
           <div id="live"
-          //  className="tab-content hidden"
-          className={`tab-content ${activeTab === 'live' ? '' : 'hidden'}`}
-           >
+            //  className="tab-content hidden"
+            className={`tab-content ${activeTab === 'live' ? '' : 'hidden'}`}
+          >
             <div className="md:grid grid-cols-12 gap-4">
               <div className="lg:col-span-8 md:col-span-7">
                 <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                   {/* Buttons */}
                   <div className="flex space-x-4">
                     <button
-                     onClick={() => handleSubTabChange('all')}
+                      onClick={() => handleSubTabChange('all')}
                       // className="suide-pera-all bg-[#1A80F8] text-white rounded-md px-4 py-2 font-medium"
                       className={`suide-pera-all ${activeSubTab === 'all' ? 'bg-[#1A80F8] text-white' : ''} rounded-md px-4 py-2 font-medium`}
                     >
                       All
                     </button>
                     <button
-                       onClick={() => handleSubTabChange('all1')}
+                      onClick={() => handleSubTabChange('all1')}
                       // className="suide-pera-all1  rounded-md px-4 py-2 font-medium"
                       className={`suide-pera-all ${activeSubTab === 'all1' ? 'bg-[#1A80F8] text-white' : ''} rounded-md px-4 py-2 font-medium`}
                     >
                       SCHEDULED
                     </button>
                     <button
-                       onClick={() => handleSubTabChange('all3')}
+                      onClick={() => handleSubTabChange('all3')}
                       // className="suide-pera-all3 rounded-md px-4 py-2 font-medium"
                       className={`suide-pera-all ${activeSubTab === 'all3' ? 'bg-[#1A80F8] text-white' : ''} rounded-md px-4 py-2 font-medium`}
                     >
@@ -1512,9 +1512,9 @@ const T20Series = () => {
                   </div>
                   {/* Data Sections */}
                 </div>
-                <div 
-                // className="suide-pera-all-data" 
-                className={`suide-pera-all-data ${activeSubTab === 'all' ? 'block' : 'hidden'}`}>
+                <div
+                  // className="suide-pera-all-data" 
+                  className={`suide-pera-all-data ${activeSubTab === 'all' ? 'block' : 'hidden'}`}>
                   {/* SCHEDULED match desktopn view Start */}
                   <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff]">
                     <div className="flex items-center justify-between mb-4">
@@ -2258,9 +2258,9 @@ const T20Series = () => {
                   {/* RESULT 2 match Mobile view End */}
                 </div>
                 <div
-                //  className="suide-pera-all1-data hidden"
-                 className={`suide-pera-all-data ${activeSubTab === 'all1' ? 'block' : 'hidden'}`}
-                 >
+                  //  className="suide-pera-all1-data hidden"
+                  className={`suide-pera-all-data ${activeSubTab === 'all1' ? 'block' : 'hidden'}`}
+                >
                   {/* SCHEDULED match desktopn view Start */}
                   <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff]">
                     <div className="flex items-center justify-between mb-4">
@@ -2511,8 +2511,8 @@ const T20Series = () => {
                   </div>
                   {/* SCHEDULED match desktopn view End */}
                 </div>
-                <div 
-                className={`suide-pera-all-data ${activeSubTab === 'all3' ? 'block' : 'hidden'}`}
+                <div
+                  className={`suide-pera-all-data ${activeSubTab === 'all3' ? 'block' : 'hidden'}`}
                 // className="suide-pera-all3-data hidden"
                 >
                   {/* RESULT match desktopn view Start */}
@@ -3665,9 +3665,9 @@ const T20Series = () => {
           </div>
           {/* Scorecard Tab */}
           <div id="scorecard"
-          //  className="tab-content hidden"
-           className={`tab-content ${activeTab === 'scorecard' ? '' : 'hidden'}`}
-           >
+            //  className="tab-content hidden"
+            className={`tab-content ${activeTab === 'scorecard' ? '' : 'hidden'}`}
+          >
             {/* <div className="md:grid grid-cols-12 gap-4">
 
               <div className="lg:col-span-8 md:col-span-7">
@@ -4355,24 +4355,24 @@ const T20Series = () => {
             </div>
           </div>
           {/* Overs Tab */}
-          <div id="overs" 
-          // className="tab-content hidden"
-          className={`tab-content ${activeTab === 'overs' ? '' : 'hidden'}`}
+          <div id="overs"
+            // className="tab-content hidden"
+            className={`tab-content ${activeTab === 'overs' ? '' : 'hidden'}`}
           >
             jhds
           </div>
           {/* Points Table Tab */}
           <div id="points"
-          //  className="tab-content hidden"
-           className={`tab-content ${activeTab === 'points' ? '' : 'hidden'}`}
-           >
+            //  className="tab-content hidden"
+            className={`tab-content ${activeTab === 'points' ? '' : 'hidden'}`}
+          >
             jdskd
           </div>
           {/* Live Stats Tab */}
           <div id="stats"
-          //  className="tab-content hidden"
-           className={`tab-content ${activeTab === 'stats' ? '' : 'hidden'}`}
-           >
+            //  className="tab-content hidden"
+            className={`tab-content ${activeTab === 'stats' ? '' : 'hidden'}`}
+          >
             <div className="md:grid grid-cols-12 gap-4">
               <div className="lg:col-span-3 md:col-span-4">
                 <div className="rounded-lg p-2 mb-4 bg-[#ffffff]">
@@ -4979,7 +4979,7 @@ const T20Series = () => {
               dfghjk
             </div>
           </div>
-          
+
         </div>
       </section>
     </Layout>

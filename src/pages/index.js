@@ -34,17 +34,17 @@ const index = () => {
 
     return (
         <Layout >
-            <section class="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
+            <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
 
-                <div class="mt-2 mb-2">
-                    <img src="/assets/img/home.png" class="w-[100%]" alt="" />
+                <div className="mt-2 mb-2">
+                    <img src="/assets/img/home.png" className="w-[100%]" alt="" />
                 </div>
 
-                <div class="md:grid grid-cols-12 gap-4">
-                    <div class="lg:col-span-8 md:col-span-7">
-                        <div class="tab-section">
-                            <div class="tabs my-4">
-                                <div class="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto relative overflow-x-auto  [&::-webkit-scrollbar] [&::-webkit-scrollbar]:h-[5px] 
+                <div className="md:grid grid-cols-12 gap-4">
+                    <div className="lg:col-span-8 md:col-span-7">
+                        <div className="tab-section">
+                            <div className="tabs my-4">
+                                <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto relative overflow-x-auto  [&::-webkit-scrollbar] [&::-webkit-scrollbar]:h-[5px] 
                                       [&::-webkit-scrollbar-track]:bg-gray-100 
                                       [&::-webkit-scrollbar-thumb]:bg-[#DFE9F6] 
                                        dark:[&::-webkit-scrollbar-track]:bg-neutral-700 
@@ -52,7 +52,7 @@ const index = () => {
 
                                     <button
 
-                                        // class="font-medium py-2 px-5 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
+                                        // className="font-medium py-2 px-5 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
                                         onClick={() => handleMainTabClick('info1')}
                                         className={`font-medium py-2 px-5 whitespace-nowrap ${activeMainTab === 'info1' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                                     >
@@ -62,7 +62,7 @@ const index = () => {
                                         onClick={() => handleMainTabClick('live1')}
                                         className={`font-medium py-2 px-5 whitespace-nowrap ${activeMainTab === 'live1' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                                     // onclick="handleTabClick(event, 'live1', this)"
-                                    //     class="font-medium py-2 px-5 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-5 whitespace-nowrap"
                                     >
                                         Live
                                     </button>
@@ -70,7 +70,7 @@ const index = () => {
                                         onClick={() => handleMainTabClick('finished1')}
                                         className={`font-medium py-2 px-5 whitespace-nowrap ${activeMainTab === 'finished1' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                                     // onclick="handleTabClick(event, 'finished1', this)"
-                                    //     class="font-medium py-2 px-5 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-5 whitespace-nowrap"
                                     >
                                         Finished
                                     </button>
@@ -78,7 +78,7 @@ const index = () => {
                                         onClick={() => handleMainTabClick('scorecard1')}
                                         className={`font-medium py-2 px-5 whitespace-nowrap ${activeMainTab === 'scorecard1' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                                     // onclick="handleTabClick(event, 'scorecard1', this)"
-                                    //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-3 whitespace-nowrap"
                                     >
                                         Scheduled
                                     </button>
@@ -87,15 +87,15 @@ const index = () => {
 
 
 
-                            <div class="tab-content-container">
+                            <div className="tab-content-container">
                                 <div id="info1" className={`tab-content ${activeMainTab === 'info1' ? '' : 'hidden'}`}>
                                     {/* <!-- live match desktop view start --> */}
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A70B0B] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A70B0B] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full"><svg class="h-[10px] w-[11px]">
+                                                    <span className="rounded-full"><svg className="h-[10px] w-[11px]">
                                                         <circle fill="#ff0000" stroke="none" cx="5" cy="5" r="5">
                                                             <animate attributeName="opacity" dur="1s" values="0;1;0"
                                                                 repeatCount="indefinite" begin="0.1" />
@@ -105,27 +105,27 @@ const index = () => {
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Bangladesh tour of India - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">BAN</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">BAN</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -133,38 +133,38 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="py-4 px-3">
+                                        <div className="py-4 px-3">
                                             <Link href="/match-live-now">
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">1st TEST day
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">1st TEST day
                                                             1 , MA
                                                             Chidambaram
                                                             Stadium, Chennai</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/flg-1.png" class="h-[30px] rounded-full"
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/flg-1.png" className="h-[30px] rounded-full"
                                                                     alt="aus" />
-                                                                <span class="text-[#909090] font-semibold">IND - </span>
+                                                                <span className="text-[#909090] font-semibold">IND - </span>
                                                             </div>
-                                                            <p><span class=" font-semibold">339/6</span><span
-                                                                class="text-[#909090] text-[13px]"> (81.2 overs)</span></p>
-                                                            <img src="/assets/img/home/bat.png" class="h-[13px]" alt="" />
+                                                            <p><span className=" font-semibold">339/6</span><span
+                                                                className="text-[#909090] text-[13px]"> (81.2 overs)</span></p>
+                                                            <img src="/assets/img/home/bat.png" className="h-[13px]" alt="" />
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/ban.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="text-[#909090] font-semibold">Bangladesh -
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/ban.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="text-[#909090] font-semibold">Bangladesh -
                                                                     </span>
 
                                                                 </div>
-                                                                <p><span class="font-semibold">(Yet to bat)</span></p>
+                                                                <p><span className="font-semibold">(Yet to bat)</span></p>
 
                                                             </div>
                                                         </div>
@@ -172,8 +172,8 @@ const index = () => {
 
 
 
-                                                    <div class=" font-medium text-center">
-                                                        <p class="text-[#2F335C] text-[14px]">BAN won the toss & <br /> elected to
+                                                    <div className=" font-medium text-center">
+                                                        <p className="text-[#2F335C] text-[14px]">BAN won the toss & <br /> elected to
                                                             bowl</p>
 
                                                     </div>
@@ -182,25 +182,25 @@ const index = () => {
                                             </Link>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="/h2h">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -211,11 +211,11 @@ const index = () => {
                                     </div>
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#a70b0b] rounded-full font-semibold">
-                                                    <span class="rounded-full"><svg class="h-[8px] w-[10px]">
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#a70b0b] rounded-full font-semibold">
+                                                    <span className="rounded-full"><svg className="h-[8px] w-[10px]">
                                                         <circle fill="#ff0000" stroke="none" cx="3" cy="3" r="3">
                                                             <animate attributeName="opacity" dur="1s" values="0;1;0"
                                                                 repeatCount="indefinite" begin="0.1" />
@@ -226,12 +226,12 @@ const index = () => {
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
-                                                <span class="absolute right-4 top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-4 top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
@@ -239,31 +239,31 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
-                                        <div class="open-Performance-data">
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="open-Performance-data">
                                             <Link href="/match-live-now">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[11px] mb-4 font-normal">1st TEST day 1 , MA
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[11px] mb-4 font-normal">1st TEST day 1 , MA
                                                         Chidambaram
                                                         Stadium, Chennai</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
 
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/flg-1.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/flg-1.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
-                                                                            <span class="text-[#5e5e5e] font-medium">IND</span>
-                                                                            <img src="/assets/img/home/bat.png" class="h-[15px]" alt="" />
+                                                                        <span className="flex items-center gap-1">
+                                                                            <span className="text-[#5e5e5e] font-medium">IND</span>
+                                                                            <img src="/assets/img/home/bat.png" className="h-[15px]" alt="" />
                                                                         </span>
-                                                                        <p class="flex items-end gap-2">
-                                                                            <span class=" font-semibold">339/6</span>
+                                                                        <p className="flex items-end gap-2">
+                                                                            <span className=" font-semibold">339/6</span>
 
                                                                             <span
-                                                                                class="text-[#909090] text-[12px] font-normal">
+                                                                                className="text-[#909090] text-[12px] font-normal">
                                                                                 (81.2
                                                                                 overs)</span>
 
@@ -277,22 +277,22 @@ const index = () => {
 
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/ban.png" class="h-[30px]" alt="ind" />
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/ban.png" className="h-[30px]" alt="ind" />
                                                                         <div>
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Bangladesh</span>
-                                                                            <p class="font-normal text-[11px]">(Yet to bat)</p>
+                                                                                className="text-[#5e5e5e] font-medium">Bangladesh</span>
+                                                                            <p className="font-normal text-[11px]">(Yet to bat)</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class=" font-medium text-center">
+                                                        <div className=" font-medium text-center">
 
-                                                            <p class="text-[#2F335C] font-light mt-1 text-[11px]">BAN
+                                                            <p className="text-[#2F335C] font-light mt-1 text-[11px]">BAN
                                                                 elected to bowl</p>
 
                                                         </div>
@@ -301,42 +301,42 @@ const index = () => {
                                                 </div>
                                             </Link>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center space-x-2 text-[11px]">
-                                                    <span class="text-[#909090] font-medium">BAN</span>
+                                                <div className="flex items-center space-x-2 text-[11px]">
+                                                    <span className="text-[#909090] font-medium">BAN</span>
                                                     <span
-                                                        class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
-                                                        <span class="">
+                                                        className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                        <span className="">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                             </svg>
                                                         </span>41</span>
                                                     <span
-                                                        class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
-                                                            class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                        className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
+                                                            className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                             </svg>
                                                         </span>45</span>
@@ -345,36 +345,36 @@ const index = () => {
                                         </div>
                                     </div>
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#0B773C] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#0B773C] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> RESULT
+                                                    <span className="rounded-full">●</span> RESULT
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2  font-medium">
-                                                <span class="text-[13px]">AUS</span>
+                                            <div className="flex items-center space-x-2  font-medium">
+                                                <span className="text-[13px]">AUS</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>37</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>40</span>
@@ -382,63 +382,63 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="py-4 px-3">
+                                        <div className="py-4 px-3">
 
-                                            <div class="flex justify-between items-center text-[14px]">
+                                            <div className="flex justify-between items-center text-[14px]">
                                                 <Link href="/match-result">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">1st ODI , Trent
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">1st ODI , Trent
                                                             Bridge,
                                                             Nottingham</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/eng.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="text-[#909090] font-semibold">Australia - </span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/eng.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="text-[#909090] font-semibold">Australia - </span>
                                                             </div>
-                                                            <p><span class=" font-semibold">317/3</span><span
-                                                                class="text-[#909090] text-[13px]"> (44 overs)</span></p>
+                                                            <p><span className=" font-semibold">317/3</span><span
+                                                                className="text-[#909090] text-[13px]"> (44 overs)</span></p>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="text-[#909090] font-semibold">England - </span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="text-[#909090] font-semibold">England - </span>
 
                                                                 </div>
-                                                                <p><span class=" font-semibold">315/10</span><span
-                                                                    class="text-[#909090] text-[13px]">(49.4 overs)</span>
+                                                                <p><span className=" font-semibold">315/10</span><span
+                                                                    className="text-[#909090] text-[13px]">(49.4 overs)</span>
                                                                 </p>
 
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
                                                 <Link href="/match-result">
-                                                    <div class=" font-semibold flex flex-col items-center">
+                                                    <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
-                                                        <p class="text-[#0B773C] text-1xl w-[75%] text-center">Australia won by
+                                                        <p className="text-[#0B773C] text-1xl w-[75%] text-center">Australia won by
                                                             7
                                                             wickets
                                                         </p>
                                                     </div>
                                                 </Link>
 
-                                                <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
 
-                                                <div class="flex flex-col items-center">
+                                                <div className="flex flex-col items-center">
 
                                                     <img src="/assets/img/player-2.png" alt="" />
 
-                                                    <p class=" font-semibold">Adam Zampa</p>
+                                                    <p className=" font-semibold">Adam Zampa</p>
                                                     <p>Man of the match</p>
 
                                                 </div>
@@ -447,53 +447,53 @@ const index = () => {
                                         </div>
                                     </div>
 
-                                    <div class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#0B773C] rounded-full  font-semibold"
+                                    <div className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#0B773C] rounded-full  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> RESULT
+                                                    <span className="rounded-full">●</span> RESULT
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
-                                                <span class="absolute right-4 top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-4 top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="open-Performance-data">
+                                        <div className="open-Performance-data">
                                             <Link href="/match-result">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[11px] mb-4 font-normal">1st ODI , Trent
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[11px] mb-4 font-normal">1st ODI , Trent
                                                         Bridge,
                                                         Nottingham</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/eng.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/eng.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Australia</span>
+                                                                                className="text-[#5e5e5e] font-medium">Australia</span>
 
                                                                         </span>
-                                                                        <p class="flex items-end gap-2">
-                                                                            <span class=" font-semibold">317/3</span>
+                                                                        <p className="flex items-end gap-2">
+                                                                            <span className=" font-semibold">317/3</span>
 
                                                                             <span
-                                                                                class="text-[#909090] text-[12px] font-normal">(44
+                                                                                className="text-[#909090] text-[12px] font-normal">(44
                                                                                 overs)</span>
 
 
@@ -503,21 +503,21 @@ const index = () => {
                                                             </div>
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/aus.png" class="h-[30px] rounded-full"
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/aus.png" className="h-[30px] rounded-full"
                                                                             alt="aus" />
                                                                         <div>
-                                                                            <span class="flex items-center gap-1">
+                                                                            <span className="flex items-center gap-1">
                                                                                 <span
-                                                                                    class="text-[#5e5e5e] font-medium">England</span>
+                                                                                    className="text-[#5e5e5e] font-medium">England</span>
 
                                                                             </span>
-                                                                            <p class="flex items-end gap-2">
-                                                                                <span class=" font-semibold">315/10</span>
+                                                                            <p className="flex items-end gap-2">
+                                                                                <span className=" font-semibold">315/10</span>
 
                                                                                 <span
-                                                                                    class="text-[#909090] text-[12px] font-normal">(49.4
+                                                                                    className="text-[#909090] text-[12px] font-normal">(49.4
                                                                                     overs)</span>
 
 
@@ -530,12 +530,12 @@ const index = () => {
                                                             </div>
                                                         </div>
 
-                                                        {/* <!-- <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
+                                                        {/* <!-- <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
 
-                                                        <div class=" font-semibold flex flex-col items-center">
+                                                        <div className=" font-semibold flex flex-col items-center">
                                                             <img src="/assets/img/home/win.png" alt="" />
                                                             <p
-                                                                class="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
+                                                                className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
                                                                 Australia
                                                                 won
                                                                 by 7 wickets</p>
@@ -545,31 +545,31 @@ const index = () => {
                                                 </div>
                                             </Link>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center justify-between">
-                                                    <div class="flex items-center gap-1">
-                                                        <img src="/assets/img/player-2.png" class="h-[32px]" alt="" />
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center gap-1">
+                                                        <img src="/assets/img/player-2.png" className="h-[32px]" alt="" />
                                                         <div>
-                                                            <p class=" font-semibold">Adam Zampa</p>
-                                                            <p class="text-[11px]">Man of the match</p>
+                                                            <p className=" font-semibold">Adam Zampa</p>
+                                                            <p className="text-[11px]">Man of the match</p>
                                                         </div>
                                                     </div>
 
@@ -580,36 +580,36 @@ const index = () => {
                                         </div>
                                     </div>
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">AUS</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">AUS</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -617,30 +617,30 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
                                         <Link href="/match-upcoming">
-                                            <div class="py-4 px-3">
+                                            <div className="py-4 px-3">
 
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                             Cricket
                                                             Stadium, Sharjah</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/eng.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="font-semibold">Australia</span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/eng.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="font-semibold">Australia</span>
                                                             </div>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="font-semibold">England</span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="font-semibold">England</span>
 
                                                                 </div>
                                                             </div>
@@ -649,26 +649,26 @@ const index = () => {
 
 
 
-                                                    <div class="font-semibold text-center">
-                                                        <div class="text-[#144280]">
-                                                            <div class="flex space-x-1 countdown" data-time="28800">
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px]">
-                                                                        <span class="hours"></span>
+                                                    <div className="font-semibold text-center">
+                                                        <div className="text-[#144280]">
+                                                            <div className="flex space-x-1 countdown" data-time="28800">
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px]">
+                                                                        <span className="hours"></span>
                                                                     </div>
-                                                                    <span class="text-[11px] font-normal"> Hrs </span>
+                                                                    <span className="text-[11px] font-normal"> Hrs </span>
                                                                 </div>
                                                                 <div>:</div>
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px]">
-                                                                        <span class="minutes"></span>
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px]">
+                                                                        <span className="minutes"></span>
                                                                     </div>
-                                                                    <span class="text-[11px] font-normal"> Min </span>
+                                                                    <span className="text-[11px] font-normal"> Min </span>
                                                                 </div>
                                                                 <div>:</div>
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px] seconds"></div>
-                                                                    <span class="text-[11px] font-normal"> Sec </span>
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px] seconds"></div>
+                                                                    <span className="text-[11px] font-normal"> Sec </span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -677,25 +677,25 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="#">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -705,85 +705,85 @@ const index = () => {
                                     </div>
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full font-semibold"
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England 2024
                                                     </h4>
                                                 </div>
-                                                <span class="absolute right-[12px] top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-[12px] top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
                                         <Link href="/match-upcoming">
-                                            <div class="open-Performance-data">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI, Sharjah
+                                            <div className="open-Performance-data">
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI, Sharjah
                                                         Cricket Stadium, Sharjah</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
+                                                    <div className="flex justify-between items-center text-[14px]">
                                                         <div>
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/eng.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/eng.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Australia</span>
+                                                                                className="text-[#5e5e5e] font-medium">Australia</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px] rounded-full"
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">England</span>
+                                                                                className="text-[#5e5e5e] font-medium">England</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="font-semibold text-center">
-                                                            <div class="text-[#144280] mt-1">
-                                                                <div class="flex space-x-1 justify-center countdown"
+                                                        <div className="font-semibold text-center">
+                                                            <div className="text-[#144280] mt-1">
+                                                                <div className="flex space-x-1 justify-center countdown"
                                                                     data-time="28800">
                                                                     {/* <!-- 08:00:00 = 8 * 60 * 60 = 28800 seconds --> */}
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px]">
-                                                                            <span class="hours"></span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px]">
+                                                                            <span className="hours"></span>
                                                                         </div>
-                                                                        <span class="text-[11px] font-normal"> Hrs </span>
+                                                                        <span className="text-[11px] font-normal"> Hrs </span>
                                                                     </div>
                                                                     <div>:</div>
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px]">
-                                                                            <span class="minutes"></span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px]">
+                                                                            <span className="minutes"></span>
                                                                         </div>
-                                                                        <span class="text-[11px] font-normal"> Min </span>
+                                                                        <span className="text-[11px] font-normal"> Min </span>
                                                                     </div>
                                                                     <div>:</div>
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px] seconds"></div>
-                                                                        <span class="text-[11px] font-normal"> Sec </span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px] seconds"></div>
+                                                                        <span className="text-[11px] font-normal"> Sec </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -793,41 +793,41 @@ const index = () => {
                                             </div>
                                         </Link>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-2">
-                                            <div class="flex items-center">
+                                        <div className="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class="text-[#909090] text-[11px] font-medium">Points Table</p>
+                                                    <p className="text-[#909090] text-[11px] font-medium">Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <div class="flex justify-end items-center space-x-2">
-                                                        <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                        <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                    <div className="flex justify-end items-center space-x-2">
+                                                        <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                        <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                     </div>
                                                 </a>
                                             </div>
 
-                                            <div class="flex items-center space-x-2 text-[11px]">
-                                                <span class="text-[#909090] font-medium">BAN</span>
+                                            <div className="flex items-center space-x-2 text-[11px]">
+                                                <span className="text-[#909090] font-medium">BAN</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18">
                                                             </path>
                                                         </svg>
                                                     </span>41
                                                 </span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B] rounded-md text-[#A70B0B] pr-2">
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B] rounded-md text-[#A70B0B] pr-2">
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3">
                                                             </path>
                                                         </svg>
@@ -838,36 +838,36 @@ const index = () => {
                                     </div>
 
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full pr-2 font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full pr-2 font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Afghanistan tour of South Africa</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">AFG</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">AFG</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -875,30 +875,30 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
                                         <Link href="/match-upcoming">
-                                            <div class="py-4 px-3">
+                                            <div className="py-4 px-3">
 
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                             Cricket
                                                             Stadium, Sharjah</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/afg.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="font-semibold">Afghanistan</span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/afg.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="font-semibold">Afghanistan</span>
                                                             </div>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/sa.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="font-semibold">South Africa</span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/sa.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="font-semibold">South Africa</span>
 
                                                                 </div>
 
@@ -909,8 +909,8 @@ const index = () => {
 
 
 
-                                                    <div class=" font-medium text-center">
-                                                        <p class="text-[#2F335C] text-[14px]">20th September - Fri, <br /> 5:30 PM
+                                                    <div className=" font-medium text-center">
+                                                        <p className="text-[#2F335C] text-[14px]">20th September - Fri, <br /> 5:30 PM
                                                             GMT
                                                         </p>
                                                     </div>
@@ -918,25 +918,25 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="#">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -947,46 +947,46 @@ const index = () => {
 
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full font-semibold"
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England 2024</h4>
                                                 </div>
-                                                <span class="absolute right-[12px] top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-[12px] top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="open-Performance-data">
+                                        <div className="open-Performance-data">
                                             <Link href="/match-upcoming">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                         Cricket
                                                         Stadium, Sharjah</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
 
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/afg.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/afg.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Afghanistan</span>
+                                                                                className="text-[#5e5e5e] font-medium">Afghanistan</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
@@ -994,13 +994,13 @@ const index = () => {
 
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/sa.png" class="h-[30px] rounded-full"
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/sa.png" className="h-[30px] rounded-full"
                                                                             alt="aus" />
                                                                         <div>
-                                                                            <span class="flex items-center gap-1">
-                                                                                <span class="text-[#5e5e5e] font-medium">South
+                                                                            <span className="flex items-center gap-1">
+                                                                                <span className="text-[#5e5e5e] font-medium">South
                                                                                     Africa</span>
 
                                                                             </span>
@@ -1013,8 +1013,8 @@ const index = () => {
 
                                                         <div>
 
-                                                            <div class=" font-medium text-center">
-                                                                <p class="ttext-[#2F335C] font-light mt-1 text-[11px]">20th
+                                                            <div className=" font-medium text-center">
+                                                                <p className="ttext-[#2F335C] font-light mt-1 text-[11px]">20th
                                                                     September - Fri,
                                                                     <br />
                                                                     5:30 PM GMT
@@ -1025,42 +1025,42 @@ const index = () => {
                                                     </div>
                                                 </div>
                                             </Link>
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center space-x-2 text-[11px]">
-                                                    <span class="text-[#909090] font-medium">BAN</span>
+                                                <div className="flex items-center space-x-2 text-[11px]">
+                                                    <span className="text-[#909090] font-medium">BAN</span>
                                                     <span
-                                                        class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
-                                                        <span class="">
+                                                        className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                        <span className="">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"></path>
                                                             </svg>
                                                         </span>41</span>
                                                     <span
-                                                        class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
-                                                            class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                        className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
+                                                            className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"></path>
                                                             </svg>
                                                         </span>45</span>
@@ -1077,12 +1077,12 @@ const index = () => {
 
                                 <div id="live1" className={`tab-content ${activeMainTab === 'live1' ? '' : 'hidden'}`}>
                                     {/* <!-- live match desktop view start --> */}
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A70B0B] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A70B0B] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full"><svg class="h-[10px] w-[11px]">
+                                                    <span className="rounded-full"><svg className="h-[10px] w-[11px]">
                                                         <circle fill="#ff0000" stroke="none" cx="5" cy="5" r="5">
                                                             <animate attributeName="opacity" dur="1s" values="0;1;0"
                                                                 repeatCount="indefinite" begin="0.1" />
@@ -1092,27 +1092,27 @@ const index = () => {
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Bangladesh tour of India - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">BAN</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">BAN</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -1120,38 +1120,38 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="py-4 px-3">
+                                        <div className="py-4 px-3">
                                             <Link href="/match-live-now">
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">1st TEST day
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">1st TEST day
                                                             1 , MA
                                                             Chidambaram
                                                             Stadium, Chennai</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/flg-1.png" class="h-[30px] rounded-full"
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/flg-1.png" className="h-[30px] rounded-full"
                                                                     alt="aus" />
-                                                                <span class="text-[#909090] font-semibold">IND - </span>
+                                                                <span className="text-[#909090] font-semibold">IND - </span>
                                                             </div>
-                                                            <p><span class=" font-semibold">339/6</span><span
-                                                                class="text-[#909090] text-[13px]"> (81.2 overs)</span></p>
-                                                            <img src="/assets/img/home/bat.png" class="h-[13px]" alt="" />
+                                                            <p><span className=" font-semibold">339/6</span><span
+                                                                className="text-[#909090] text-[13px]"> (81.2 overs)</span></p>
+                                                            <img src="/assets/img/home/bat.png" className="h-[13px]" alt="" />
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/ban.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="text-[#909090] font-semibold">Bangladesh -
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/ban.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="text-[#909090] font-semibold">Bangladesh -
                                                                     </span>
 
                                                                 </div>
-                                                                <p><span class="font-semibold">(Yet to bat)</span></p>
+                                                                <p><span className="font-semibold">(Yet to bat)</span></p>
 
                                                             </div>
                                                         </div>
@@ -1159,8 +1159,8 @@ const index = () => {
 
 
 
-                                                    <div class=" font-medium text-center">
-                                                        <p class="text-[#2F335C] text-[14px]">BAN won the toss & <br /> elected to
+                                                    <div className=" font-medium text-center">
+                                                        <p className="text-[#2F335C] text-[14px]">BAN won the toss & <br /> elected to
                                                             bowl</p>
 
                                                     </div>
@@ -1169,25 +1169,25 @@ const index = () => {
                                             </Link>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="#">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -1198,11 +1198,11 @@ const index = () => {
                                     </div>
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#a70b0b] rounded-full font-semibold">
-                                                    <span class="rounded-full"><svg class="h-[8px] w-[10px]">
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#a70b0b] rounded-full font-semibold">
+                                                    <span className="rounded-full"><svg className="h-[8px] w-[10px]">
                                                         <circle fill="#ff0000" stroke="none" cx="3" cy="3" r="3">
                                                             <animate attributeName="opacity" dur="1s" values="0;1;0"
                                                                 repeatCount="indefinite" begin="0.1" />
@@ -1213,12 +1213,12 @@ const index = () => {
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
-                                                <span class="absolute right-4 top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-4 top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
@@ -1226,31 +1226,31 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
-                                        <div class="open-Performance-data">
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="open-Performance-data">
                                             <Link href="/match-live-now">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[11px] mb-4 font-normal">1st TEST day 1 , MA
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[11px] mb-4 font-normal">1st TEST day 1 , MA
                                                         Chidambaram
                                                         Stadium, Chennai</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
 
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/flg-1.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/flg-1.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
-                                                                            <span class="text-[#5e5e5e] font-medium">IND</span>
-                                                                            <img src="/assets/img/home/bat.png" class="h-[15px]" alt="" />
+                                                                        <span className="flex items-center gap-1">
+                                                                            <span className="text-[#5e5e5e] font-medium">IND</span>
+                                                                            <img src="/assets/img/home/bat.png" className="h-[15px]" alt="" />
                                                                         </span>
-                                                                        <p class="flex items-end gap-2">
-                                                                            <span class=" font-semibold">339/6</span>
+                                                                        <p className="flex items-end gap-2">
+                                                                            <span className=" font-semibold">339/6</span>
 
                                                                             <span
-                                                                                class="text-[#909090] text-[12px] font-normal">
+                                                                                className="text-[#909090] text-[12px] font-normal">
                                                                                 (81.2
                                                                                 overs)</span>
 
@@ -1264,22 +1264,22 @@ const index = () => {
 
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/ban.png" class="h-[30px]" alt="ind" />
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/ban.png" className="h-[30px]" alt="ind" />
                                                                         <div>
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Bangladesh</span>
-                                                                            <p class="font-normal text-[11px]">(Yet to bat)</p>
+                                                                                className="text-[#5e5e5e] font-medium">Bangladesh</span>
+                                                                            <p className="font-normal text-[11px]">(Yet to bat)</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class=" font-medium text-center">
+                                                        <div className=" font-medium text-center">
 
-                                                            <p class="text-[#2F335C] font-light mt-1 text-[11px]">BAN
+                                                            <p className="text-[#2F335C] font-light mt-1 text-[11px]">BAN
                                                                 elected to bowl</p>
 
                                                         </div>
@@ -1288,42 +1288,42 @@ const index = () => {
                                                 </div>
                                             </Link>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center space-x-2 text-[11px]">
-                                                    <span class="text-[#909090] font-medium">BAN</span>
+                                                <div className="flex items-center space-x-2 text-[11px]">
+                                                    <span className="text-[#909090] font-medium">BAN</span>
                                                     <span
-                                                        class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
-                                                        <span class="">
+                                                        className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                        <span className="">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                             </svg>
                                                         </span>41</span>
                                                     <span
-                                                        class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
-                                                            class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                        className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
+                                                            className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                             </svg>
                                                         </span>45</span>
@@ -1337,36 +1337,36 @@ const index = () => {
 
                                 <div id="finished1" className={`tab-content ${activeMainTab === 'finished1' ? '' : 'hidden'}`}>
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#0B773C] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#0B773C] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> RESULT
+                                                    <span className="rounded-full">●</span> RESULT
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2  font-medium">
-                                                <span class="text-[13px]">AUS</span>
+                                            <div className="flex items-center space-x-2  font-medium">
+                                                <span className="text-[13px]">AUS</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>37</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>40</span>
@@ -1374,63 +1374,63 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="py-4 px-3">
+                                        <div className="py-4 px-3">
 
-                                            <div class="flex justify-between items-center text-[14px]">
+                                            <div className="flex justify-between items-center text-[14px]">
                                                 <Link href="/match-result">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">1st ODI , Trent
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">1st ODI , Trent
                                                             Bridge,
                                                             Nottingham</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/eng.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="text-[#909090] font-semibold">Australia - </span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/eng.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="text-[#909090] font-semibold">Australia - </span>
                                                             </div>
-                                                            <p><span class=" font-semibold">317/3</span><span
-                                                                class="text-[#909090] text-[13px]"> (44 overs)</span></p>
+                                                            <p><span className=" font-semibold">317/3</span><span
+                                                                className="text-[#909090] text-[13px]"> (44 overs)</span></p>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="text-[#909090] font-semibold">England - </span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="text-[#909090] font-semibold">England - </span>
 
                                                                 </div>
-                                                                <p><span class=" font-semibold">315/10</span><span
-                                                                    class="text-[#909090] text-[13px]">(49.4 overs)</span>
+                                                                <p><span className=" font-semibold">315/10</span><span
+                                                                    className="text-[#909090] text-[13px]">(49.4 overs)</span>
                                                                 </p>
 
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </Link>
-                                                <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
                                                 <Link href="/match-result">
-                                                    <div class=" font-semibold flex flex-col items-center">
+                                                    <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
-                                                        <p class="text-[#0B773C] text-1xl w-[75%] text-center">Australia won by
+                                                        <p className="text-[#0B773C] text-1xl w-[75%] text-center">Australia won by
                                                             7
                                                             wickets
                                                         </p>
                                                     </div>
                                                 </Link>
 
-                                                <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div>
 
 
-                                                <div class="flex flex-col items-center">
+                                                <div className="flex flex-col items-center">
 
                                                     <img src="/assets/img/player-2.png" alt="" />
 
-                                                    <p class=" font-semibold">Adam Zampa</p>
+                                                    <p className=" font-semibold">Adam Zampa</p>
                                                     <p>Man of the match</p>
 
                                                 </div>
@@ -1439,53 +1439,53 @@ const index = () => {
                                         </div>
                                     </div>
 
-                                    <div class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#0B773C] rounded-full  font-semibold"
+                                    <div className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#0B773C] rounded-full  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> RESULT
+                                                    <span className="rounded-full">●</span> RESULT
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
-                                                <span class="absolute right-4 top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-4 top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="open-Performance-data">
+                                        <div className="open-Performance-data">
                                             <Link href="/match-result">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[11px] mb-4 font-normal">1st ODI , Trent
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[11px] mb-4 font-normal">1st ODI , Trent
                                                         Bridge,
                                                         Nottingham</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/eng.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/eng.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Australia</span>
+                                                                                className="text-[#5e5e5e] font-medium">Australia</span>
 
                                                                         </span>
-                                                                        <p class="flex items-end gap-2">
-                                                                            <span class=" font-semibold">317/3</span>
+                                                                        <p className="flex items-end gap-2">
+                                                                            <span className=" font-semibold">317/3</span>
 
                                                                             <span
-                                                                                class="text-[#909090] text-[12px] font-normal">(44
+                                                                                className="text-[#909090] text-[12px] font-normal">(44
                                                                                 overs)</span>
 
 
@@ -1495,21 +1495,21 @@ const index = () => {
                                                             </div>
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/aus.png" class="h-[30px] rounded-full"
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/aus.png" className="h-[30px] rounded-full"
                                                                             alt="aus" />
                                                                         <div>
-                                                                            <span class="flex items-center gap-1">
+                                                                            <span className="flex items-center gap-1">
                                                                                 <span
-                                                                                    class="text-[#5e5e5e] font-medium">England</span>
+                                                                                    className="text-[#5e5e5e] font-medium">England</span>
 
                                                                             </span>
-                                                                            <p class="flex items-end gap-2">
-                                                                                <span class=" font-semibold">315/10</span>
+                                                                            <p className="flex items-end gap-2">
+                                                                                <span className=" font-semibold">315/10</span>
 
                                                                                 <span
-                                                                                    class="text-[#909090] text-[12px] font-normal">(49.4
+                                                                                    className="text-[#909090] text-[12px] font-normal">(49.4
                                                                                     overs)</span>
 
 
@@ -1522,12 +1522,12 @@ const index = () => {
                                                             </div>
                                                         </div>
 
-                                                        {/* <!-- <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
+                                                        {/* <!-- <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> --> */}
 
-                                                        <div class=" font-semibold flex flex-col items-center">
+                                                        <div className=" font-semibold flex flex-col items-center">
                                                             <img src="/assets/img/home/win.png" alt="" />
                                                             <p
-                                                                class="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
+                                                                className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
                                                                 Australia
                                                                 won
                                                                 by 7 wickets</p>
@@ -1537,31 +1537,31 @@ const index = () => {
                                                 </div>
                                             </Link>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center justify-between">
-                                                    <div class="flex items-center gap-1">
-                                                        <img src="/assets/img/player-2.png" class="h-[32px]" alt="" />
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center gap-1">
+                                                        <img src="/assets/img/player-2.png" className="h-[32px]" alt="" />
                                                         <div>
-                                                            <p class=" font-semibold">Adam Zampa</p>
-                                                            <p class="text-[11px]">Man of the match</p>
+                                                            <p className=" font-semibold">Adam Zampa</p>
+                                                            <p className="text-[11px]">Man of the match</p>
                                                         </div>
                                                     </div>
 
@@ -1577,36 +1577,36 @@ const index = () => {
 
                                 <div id="scorecard1" className={`tab-content ${activeMainTab === 'scorecard1' ? '' : 'hidden'}`}>
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full pr-3  font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full pr-3  font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[15px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England - 2024</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">AUS</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">AUS</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -1614,30 +1614,30 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
                                         <Link href="/match-upcoming">
-                                            <div class="py-4 px-3">
+                                            <div className="py-4 px-3">
 
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                             Cricket
                                                             Stadium, Sharjah</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/eng.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="font-semibold">Australia</span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/eng.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="font-semibold">Australia</span>
                                                             </div>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="font-semibold">England</span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="font-semibold">England</span>
 
                                                                 </div>
                                                             </div>
@@ -1646,26 +1646,26 @@ const index = () => {
 
 
 
-                                                    <div class="font-semibold text-center">
-                                                        <div class="text-[#144280]">
-                                                            <div class="flex space-x-1 countdown" data-time="28800">
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px]">
-                                                                        <span class="hours"></span>
+                                                    <div className="font-semibold text-center">
+                                                        <div className="text-[#144280]">
+                                                            <div className="flex space-x-1 countdown" data-time="28800">
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px]">
+                                                                        <span className="hours"></span>
                                                                     </div>
-                                                                    <span class="text-[11px] font-normal"> Hrs </span>
+                                                                    <span className="text-[11px] font-normal"> Hrs </span>
                                                                 </div>
                                                                 <div>:</div>
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px]">
-                                                                        <span class="minutes"></span>
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px]">
+                                                                        <span className="minutes"></span>
                                                                     </div>
-                                                                    <span class="text-[11px] font-normal"> Min </span>
+                                                                    <span className="text-[11px] font-normal"> Min </span>
                                                                 </div>
                                                                 <div>:</div>
-                                                                <div class="flex flex-col items-center">
-                                                                    <div class="text-[16px] seconds"></div>
-                                                                    <span class="text-[11px] font-normal"> Sec </span>
+                                                                <div className="flex flex-col items-center">
+                                                                    <div className="text-[16px] seconds"></div>
+                                                                    <span className="text-[11px] font-normal"> Sec </span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1674,25 +1674,25 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="#">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -1702,86 +1702,86 @@ const index = () => {
                                     </div>
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full font-semibold"
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England 2024
                                                     </h4>
                                                 </div>
-                                                <span class="absolute right-[12px] top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-[12px] top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
                                         <Link href="/match-upcoming">
-                                            <div class="open-Performance-data">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI, Sharjah
+                                            <div className="open-Performance-data">
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI, Sharjah
                                                         Cricket Stadium, Sharjah</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
+                                                    <div className="flex justify-between items-center text-[14px]">
                                                         <div>
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/eng.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/eng.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Australia</span>
+                                                                                className="text-[#5e5e5e] font-medium">Australia</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/aus.png" class="h-[30px] rounded-full"
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/aus.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">England</span>
+                                                                                className="text-[#5e5e5e] font-medium">England</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="font-semibold text-center">
-                                                            <div class="text-[#144280] mt-1">
-                                                                <div class="flex space-x-1 justify-center countdown"
+                                                        <div className="font-semibold text-center">
+                                                            <div className="text-[#144280] mt-1">
+                                                                <div className="flex space-x-1 justify-center countdown"
                                                                     data-time="28800">
                                                                     {/* <!-- 08:00:00 = 8 * 60 * 60 = 28800 seconds --> */}
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px]">
-                                                                            <span class="hours"></span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px]">
+                                                                            <span className="hours"></span>
                                                                         </div>
-                                                                        <span class="text-[11px] font-normal"> Hrs </span>
+                                                                        <span className="text-[11px] font-normal"> Hrs </span>
                                                                     </div>
                                                                     <div>:</div>
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px]">
-                                                                            <span class="minutes"></span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px]">
+                                                                            <span className="minutes"></span>
                                                                         </div>
-                                                                        <span class="text-[11px] font-normal"> Min </span>
+                                                                        <span className="text-[11px] font-normal"> Min </span>
                                                                     </div>
                                                                     <div>:</div>
-                                                                    <div class="flex flex-col items-center">
-                                                                        <div class="text-[16px] seconds"></div>
-                                                                        <span class="text-[11px] font-normal"> Sec </span>
+                                                                    <div className="flex flex-col items-center">
+                                                                        <div className="text-[16px] seconds"></div>
+                                                                        <span className="text-[11px] font-normal"> Sec </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1791,41 +1791,41 @@ const index = () => {
                                             </div>
                                         </Link>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-2">
-                                            <div class="flex items-center">
+                                        <div className="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class="text-[#909090] text-[11px] font-medium">Points Table</p>
+                                                    <p className="text-[#909090] text-[11px] font-medium">Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <div class="flex justify-end items-center space-x-2">
-                                                        <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                        <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                    <div className="flex justify-end items-center space-x-2">
+                                                        <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                        <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                     </div>
                                                 </a>
                                             </div>
 
-                                            <div class="flex items-center space-x-2 text-[11px]">
-                                                <span class="text-[#909090] font-medium">BAN</span>
+                                            <div className="flex items-center space-x-2 text-[11px]">
+                                                <span className="text-[#909090] font-medium">BAN</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18">
                                                             </path>
                                                         </svg>
                                                     </span>41
                                                 </span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B] rounded-md text-[#A70B0B] pr-2">
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B] rounded-md text-[#A70B0B] pr-2">
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3">
                                                             </path>
                                                         </svg>
@@ -1835,36 +1835,36 @@ const index = () => {
                                         </div>
                                     </div>
 
-                                    <div class="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full pr-2 font-semibold"
+                                    <div className="lg:block hidden rounded-lg p-4 mb-4 bg-[#ffffff] hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full pr-2 font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Afghanistan tour of South Africa</h4>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center space-x-2">
-                                                <span class="text-[13px] font-medium">AFG</span>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-[13px] font-medium">AFG</span>
                                                 <span
-                                                    class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
-                                                    <span class="">
+                                                    className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-full text-[#0B773C] pr-2">
+                                                    <span className="">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
                                                         </svg>
                                                     </span>41</span>
                                                 <span
-                                                    class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
-                                                        class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="h-[14px] w-[17px]">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                    className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-full text-[#A70B0B] pr-2"><span
+                                                        className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="h-[14px] w-[17px]">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                                                         </svg>
                                                     </span>45</span>
@@ -1872,30 +1872,30 @@ const index = () => {
 
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
                                         <Link href="/match-upcoming">
-                                            <div class="py-4 px-3">
+                                            <div className="py-4 px-3">
 
-                                                <div class="flex justify-between items-center text-[14px]">
-                                                    <div class="">
-                                                        <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="flex justify-between items-center text-[14px]">
+                                                    <div className="">
+                                                        <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                             Cricket
                                                             Stadium, Sharjah</p>
                                                         <div
-                                                            class="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                            <div class="flex items-center space-x-2">
-                                                                <img src="/assets/img/afg.png" class="h-[30px] rounded-full" alt="aus" />
-                                                                <span class="font-semibold">Afghanistan</span>
+                                                            className="flex items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                            <div className="flex items-center space-x-2">
+                                                                <img src="/assets/img/afg.png" className="h-[30px] rounded-full" alt="aus" />
+                                                                <span className="font-semibold">Afghanistan</span>
                                                             </div>
 
                                                         </div>
 
                                                         <div>
                                                             <div
-                                                                class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/sa.png" class="h-[30px]" alt="ind" />
-                                                                    <span class="font-semibold">South Africa</span>
+                                                                className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/sa.png" className="h-[30px]" alt="ind" />
+                                                                    <span className="font-semibold">South Africa</span>
 
                                                                 </div>
 
@@ -1906,8 +1906,8 @@ const index = () => {
 
 
 
-                                                    <div class=" font-medium text-center">
-                                                        <p class="text-[#2F335C] text-[14px]">20th September - Fri, <br /> 5:30 PM
+                                                    <div className=" font-medium text-center">
+                                                        <p className="text-[#2F335C] text-[14px]">20th September - Fri, <br /> 5:30 PM
                                                             GMT
                                                         </p>
                                                     </div>
@@ -1915,25 +1915,25 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="flex items-center justify-between space-x-5 mt-3">
+                                        <div className="flex items-center justify-between space-x-5 mt-3">
 
-                                            <div class="flex items-center">
+                                            <div className="flex items-center">
                                                 <a href="#">
-                                                    <p class=" text-[#909090] font-medium"> Points Table</p>
+                                                    <p className=" text-[#909090] font-medium"> Points Table</p>
                                                 </a>
-                                                <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                 <a href="#">
-                                                    <p class="text-[#909090] font-medium">Schedule</p>
+                                                    <p className="text-[#909090] font-medium">Schedule</p>
                                                 </a>
                                             </div>
 
                                             <a href="#">
-                                                <div class="flex mt-2 justify-end items-center space-x-2">
+                                                <div className="flex mt-2 justify-end items-center space-x-2">
 
                                                     <img src="/assets/img/home/handshake.png" alt="" />
-                                                    <span class="text-[#909090] font-medium">H2H</span>
+                                                    <span className="text-[#909090] font-medium">H2H</span>
 
                                                 </div>
                                             </a>
@@ -1945,46 +1945,46 @@ const index = () => {
 
 
                                     <div
-                                        class="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <div class="flex items-center space-x-2">
-                                                <div class="flex items-center text-[#A45B09] rounded-full font-semibold"
+                                        className="lg:hidden rounded-lg p-4 mb-4 bg-[#ffffff] performance-section relative hover:shadow-lg">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center space-x-2">
+                                                <div className="flex items-center text-[#A45B09] rounded-full font-semibold"
                                                     style={{ gap: "3px" }}>
-                                                    <span class="rounded-full">●</span> SCHEDULED
+                                                    <span className="rounded-full">●</span> SCHEDULED
                                                 </div>
                                                 <div>
                                                     <h4
-                                                        class="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
+                                                        className="text-[15px] font-semibold pl-[10px] border-l-[1px] border-[#E4E9F0]">
                                                         Australia tour of England 2024</h4>
                                                 </div>
-                                                <span class="absolute right-[12px] top-[19px]">
-                                                    <button class="arro-button">
-                                                        <img src="/assets/img/arrow.png" class="" alt="" />
+                                                <span className="absolute right-[12px] top-[19px]">
+                                                    <button className="arro-button">
+                                                        <img src="/assets/img/arrow.png" className="" alt="" />
                                                     </button>
                                                 </span>
                                             </div>
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                        <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                        <div class="open-Performance-data">
+                                        <div className="open-Performance-data">
                                             <Link href="/match-upcoming">
-                                                <div class="py-2 pb-3">
-                                                    <p class="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
+                                                <div className="py-2 pb-3">
+                                                    <p className="text-[#586577] text-[12px] mb-4 font-medium">2nd ODI , Sharjah
                                                         Cricket
                                                         Stadium, Sharjah</p>
-                                                    <div class="flex justify-between items-center text-[14px]">
-                                                        <div class="">
+                                                    <div className="flex justify-between items-center text-[14px]">
+                                                        <div className="">
 
                                                             <div
-                                                                class="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
-                                                                <div class="flex items-center space-x-2">
-                                                                    <img src="/assets/img/afg.png" class="h-[30px] rounded-full"
+                                                                className="items-center space-x-2 font-medium w-[162px] md:w-full mb-4">
+                                                                <div className="flex items-center space-x-2">
+                                                                    <img src="/assets/img/afg.png" className="h-[30px] rounded-full"
                                                                         alt="aus" />
                                                                     <div>
-                                                                        <span class="flex items-center gap-1">
+                                                                        <span className="flex items-center gap-1">
                                                                             <span
-                                                                                class="text-[#5e5e5e] font-medium">Afghanistan</span>
+                                                                                className="text-[#5e5e5e] font-medium">Afghanistan</span>
                                                                         </span>
                                                                     </div>
                                                                 </div>
@@ -1992,13 +1992,13 @@ const index = () => {
 
                                                             <div>
                                                                 <div
-                                                                    class="flex items-center space-x-2 font-medium w-[162px] md:w-full">
-                                                                    <div class="flex items-center space-x-2">
-                                                                        <img src="/assets/img/sa.png" class="h-[30px] rounded-full"
+                                                                    className="flex items-center space-x-2 font-medium w-[162px] md:w-full">
+                                                                    <div className="flex items-center space-x-2">
+                                                                        <img src="/assets/img/sa.png" className="h-[30px] rounded-full"
                                                                             alt="aus" />
                                                                         <div>
-                                                                            <span class="flex items-center gap-1">
-                                                                                <span class="text-[#5e5e5e] font-medium">South
+                                                                            <span className="flex items-center gap-1">
+                                                                                <span className="text-[#5e5e5e] font-medium">South
                                                                                     Africa</span>
 
                                                                             </span>
@@ -2011,8 +2011,8 @@ const index = () => {
 
                                                         <div>
 
-                                                            <div class=" font-medium text-center">
-                                                                <p class="ttext-[#2F335C] font-light mt-1 text-[11px]">20th
+                                                            <div className=" font-medium text-center">
+                                                                <p className="ttext-[#2F335C] font-light mt-1 text-[11px]">20th
                                                                     September - Fri,
                                                                     <br />
                                                                     5:30 PM GMT
@@ -2023,42 +2023,42 @@ const index = () => {
                                                     </div>
                                                 </div>
                                             </Link>
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex items-center justify-between space-x-5 mt-2">
+                                            <div className="flex items-center justify-between space-x-5 mt-2">
 
-                                                <div class="flex items-center">
+                                                <div className="flex items-center">
                                                     <a href="#">
-                                                        <p class=" text-[#909090] text-[11px] font-medium"> Points Table</p>
+                                                        <p className=" text-[#909090] text-[11px] font-medium"> Points Table</p>
                                                     </a>
 
-                                                    <div class="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
+                                                    <div className="h-[20px] border-l-[1px] mx-5 border-[#d0d3d7]"></div>
                                                     <a href="#">
-                                                        <div class="flex justify-end items-center space-x-2">
-                                                            <img src="/assets/img/home/handshake.png" class="h-[15px]" alt="" />
-                                                            <span class="text-[#909090] text-[11px] font-medium">H2H</span>
+                                                        <div className="flex justify-end items-center space-x-2">
+                                                            <img src="/assets/img/home/handshake.png" className="h-[15px]" alt="" />
+                                                            <span className="text-[#909090] text-[11px] font-medium">H2H</span>
                                                         </div>
                                                     </a>
                                                 </div>
 
-                                                <div class="flex items-center space-x-2 text-[11px]">
-                                                    <span class="text-[#909090] font-medium">BAN</span>
+                                                <div className="flex items-center space-x-2 text-[11px]">
+                                                    <span className="text-[#909090] font-medium">BAN</span>
                                                     <span
-                                                        class="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
-                                                        <span class="">
+                                                        className="flex items-center bg-[#FAFFFC] border-[1px] border-[#0B773C] rounded-md text-[#0B773C] pr-2">
+                                                        <span className="">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"></path>
                                                             </svg>
                                                         </span>41</span>
                                                     <span
-                                                        class="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
-                                                            class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="h-[14px] w-[17px]">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                        className="flex items-center bg-[#FFF7F7] border-[1px] border-[#A70B0B]  rounded-md text-[#A70B0B] pr-2"><span
+                                                            className=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="h-[14px] w-[17px]">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"></path>
                                                             </svg>
                                                         </span>45</span>
@@ -2081,21 +2081,21 @@ const index = () => {
 
 
 
-                        <div class="tab-section">
+                        <div className="tab-section">
 
-                            <div class="tabs my-4">
-                                <div class="flex text-1xl space-x-4 p-2 bg-[#ffffff] rounded-lg overflow-auto">
+                            <div className="tabs my-4">
+                                <div className="flex text-1xl space-x-4 p-2 bg-[#ffffff] rounded-lg overflow-auto">
                                     <button
                                         onClick={() => handleTabClick('news2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'news2' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                                     //  onclick="handleTabClick(event, 'news2', this)"
-                                    //     class="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
+                                    //     className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
                                     >
                                         News
                                     </button>
                                     <button
                                         // onclick="handleTabClick(event, 'fantasytips2', this)"
-                                        //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                        //     className="font-medium py-2 px-3 whitespace-nowrap"
                                         onClick={() => handleTabClick('fantasytips2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'fantasytips2' ? 'bg-[#1A80F8] text-white' : ''}`}
                                     >
@@ -2105,13 +2105,13 @@ const index = () => {
                                         onClick={() => handleTabClick('ipl2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'ipl2' ? 'bg-[#1A80F8] text-white' : ''}`}
                                     // onclick="handleTabClick(event, 'ipl2', this)"
-                                    //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-3 whitespace-nowrap"
                                     >
                                         IPL 2025
                                     </button>
                                     <button
                                         // onclick="handleTabClick(event, 'dailyquiz2', this)"
-                                        //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                        //     className="font-medium py-2 px-3 whitespace-nowrap"
                                         onClick={() => handleTabClick('dailyquiz2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'dailyquiz2' ? 'bg-[#1A80F8] text-white' : ''}`}
                                     >
@@ -2121,7 +2121,7 @@ const index = () => {
                                         onClick={() => handleTabClick('pointstable2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'pointstable2' ? 'bg-[#1A80F8] text-white' : ''}`}
                                     // onclick="handleTabClick(event, 'pointstable2', this)"
-                                    //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-3 whitespace-nowrap"
                                     >
                                         Points Table
                                     </button>
@@ -2129,24 +2129,24 @@ const index = () => {
                                         onClick={() => handleTabClick('socialtrends2')}
                                         className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'socialtrends2' ? 'bg-[#1A80F8] text-white' : ''}`}
                                     // onclick="handleTabClick(event, 'socialtrends2', this)"
-                                    //     class="font-medium py-2 px-3 whitespace-nowrap"
+                                    //     className="font-medium py-2 px-3 whitespace-nowrap"
                                     >
                                         Social Trends
                                     </button>
                                 </div>
                             </div>
 
-                            <div class="tab-content-container">
+                            <div className="tab-content-container">
                                 <div id="news2" className={`tab-content ${activeTab === 'news2' ? '' : 'hidden'}`}>
-                                    <div class="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
-                                        <div class="lg:grid grid-cols-12 gap-4">
-                                            <div class="col-span-6 ">
+                                    <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
+                                        <div className="lg:grid grid-cols-12 gap-4">
+                                            <div className="col-span-6 ">
                                                 <img src="/assets/img/team-1.png" alt="Main news"
-                                                    class="rounded-lg w-full h-48 object-cover mb-3" />
+                                                    className="rounded-lg w-full h-48 object-cover mb-3" />
                                             </div>
-                                            <div class="col-span-6">
-                                                <p class="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
-                                                    class="ml-2 pr-[1px]">
+                                            <div className="col-span-6">
+                                                <p className="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
+                                                    className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                         height="15" viewBox="0 0 48 48">
                                                         <polygon fill="#42a5f5"
@@ -2156,29 +2156,29 @@ const index = () => {
                                                             points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                         </polygon>
                                                     </svg>
-                                                </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                </span> Uc Team <span className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                            stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
                                                         </svg>
                                                     </span> October 9, 2024</p>
-                                                <h3 class="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live -
+                                                <h3 className="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live -
                                                     Jagadeesan hits
                                                     a century; Haryana trounce
                                                 </h3>
-                                                <p class="text-gray-500 font-normal">India will go into the home Test series
+                                                <p className="text-gray-500 font-normal">India will go into the home Test series
                                                     against New Zealand with pretty much the same squad that took on Bangladesh
                                                     in September
                                                     - India's last red-ball action ahead of the five-Test...</p>
                                                 <a href="#">
                                                     <p
-                                                        class="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">
+                                                        className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">
                                                         Read
                                                         more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="size-3 ml-2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                            viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                            className="size-3 ml-2">
+                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                 d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                                                         </svg>
                                                     </p>
@@ -2187,18 +2187,18 @@ const index = () => {
                                         </div>
 
 
-                                        <div class="lg:grid grid-cols-12 gap-4">
+                                        <div className="lg:grid grid-cols-12 gap-4">
 
-                                            <div class="col-span-6">
-                                                <div class="flex gap-3 my-5">
+                                            <div className="col-span-6">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-1.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                                        <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                             series in Australia to close out this year.into the home Test series
                                                             against</h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2208,11 +2208,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2220,18 +2220,18 @@ const index = () => {
                                                     </div>
                                                 </div>
 
-                                                <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                                <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                                <div class="flex gap-3 my-5">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-2.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to
+                                                        <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to
                                                             opt
                                                             central contract this is cricket
                                                         </h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2241,11 +2241,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2254,17 +2254,17 @@ const index = () => {
                                                     </div>
                                                 </div>
 
-                                                <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                                <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                                <div class="flex gap-3 my-5">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-3.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                                        <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                             really took off, they have some reflecting to do.
                                                         </h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2274,11 +2274,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2288,16 +2288,16 @@ const index = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="col-span-6">
-                                                <div class="flex gap-3 my-5">
+                                            <div className="col-span-6">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-1.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                                        <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                             series in Australia to close out this year.into the home Test series
                                                             against</h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2307,11 +2307,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2319,18 +2319,18 @@ const index = () => {
                                                     </div>
                                                 </div>
 
-                                                <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                                <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                                <div class="flex gap-3 my-5">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-2.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to
+                                                        <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to
                                                             opt
                                                             central contract this is cricket
                                                         </h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2340,11 +2340,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2353,17 +2353,17 @@ const index = () => {
                                                     </div>
                                                 </div>
 
-                                                <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                                <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                                <div class="flex gap-3 my-5">
+                                                <div className="flex gap-3 my-5">
                                                     <img src="/assets/img/flag/p-3.png" alt="News thumbnail"
-                                                        class="rounded-lg h-[90px]" />
+                                                        className="rounded-lg h-[90px]" />
                                                     <div>
-                                                        <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                                        <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                             really took off, they have some reflecting to do.
                                                         </h4>
-                                                        <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                            class="ml-2 pr-[1px]">
+                                                        <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                            className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                                 width="15" height="15" viewBox="0 0 48 48">
                                                                 <polygon fill="#42a5f5"
@@ -2373,11 +2373,11 @@ const index = () => {
                                                                     points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                                 </polygon>
                                                             </svg>
-                                                        </span> Uc Team <span class="ml-2 pr-[1px]">
+                                                        </span> Uc Team <span className="ml-2 pr-[1px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                    class="size-3">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                    className="size-3">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                     </path>
                                                                 </svg>
@@ -2391,11 +2391,11 @@ const index = () => {
 
                                         <a href="#">
                                             <div
-                                                class="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
+                                                className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
                                                 More from News <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                    class="size-3 ml-2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                    className="size-3 ml-2">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
                                                         d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                                                 </svg>
                                             </div>
@@ -2439,7 +2439,7 @@ const index = () => {
                             </div>
                         </div>
 
-                   <WeeklySlider />
+                        <WeeklySlider />
 
 
                         <div className=" pb-2 my-4">
@@ -2965,10 +2965,10 @@ const index = () => {
                                     }}
                                 >
                                     <Link href="/team">
-                                    <div className=" flex items-center space-x-2 justify-center">
-                                        <img src="/assets/img/flag/17.png" alt="" />
-                                        <p className="font-semibold">India</p>
-                                    </div>
+                                        <div className=" flex items-center space-x-2 justify-center">
+                                            <img src="/assets/img/flag/17.png" alt="" />
+                                            <p className="font-semibold">India</p>
+                                        </div>
                                     </Link>
                                 </div>
                             </div>

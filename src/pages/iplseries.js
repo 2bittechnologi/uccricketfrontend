@@ -48,7 +48,7 @@ const IplSeries = () => {
     return (
         <Layout>
             <section className="bg-[#0E2149]">
-                <div className="lg:w-[1000px] mx-auto text-white md:pt-10 pt-5 pb-10">
+                <div className="lg:w-[1000px] mx-auto text-white pt-5 pb-10 " style={{ paddingTop: "37px" }}>
                     <div className="flex items-center justify-between md:p-4 max-w-6xl mx-auto">
                         {/* Left Arrow */}
                         <button className="md:block hidden p-2 bg-gray-700 rounded-full hover:bg-gray-600">
@@ -2697,7 +2697,7 @@ const IplSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -2944,7 +2944,7 @@ const IplSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -3447,7 +3447,7 @@ const IplSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -3693,7 +3693,7 @@ const IplSeries = () => {
                                                         </div>
                                                     </div>
                                                     {"{"}/*{" "}
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}{" "}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}{" "}
                                                     */{"}"}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
@@ -3941,182 +3941,182 @@ const IplSeries = () => {
                         </div>
                     </div>
                     <div id="squads" className={`tab-content ${activeTab === 'squads' ? '' : 'hidden'}`}>
-                        <div class="py-2 mb-2">
-                            <h3 class="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
+                        <div className="py-2 mb-2">
+                            <h3 className="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
                                 WT20 World Cup 2024 Squads
                             </h3>
                         </div>
 
 
 
-                        <div class="md:grid grid-cols-12 gap-4">
-                            <div class="lg:col-span-4 md:col-span-5">
-                                <div class="rounded-lg p-2 mb-4 bg-[#ffffff]">
-                                    <div id="team-buttons" class="">
+                        <div className="md:grid grid-cols-12 gap-4">
+                            <div className="lg:col-span-4 md:col-span-5">
+                                <div className="rounded-lg p-2 mb-4 bg-[#ffffff]">
+                                    <div id="team-buttons" className="">
 
                                         <button
-                                            // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                            // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "aus-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("aus-team")}
                                         // data-target="aus-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Afghanistan Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Afghanistan Flag" />
                                             Australia-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "ind-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("ind-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="ind-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             India-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "eng-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("eng-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="eng-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             England-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "south-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("south-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center active"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center active"
                                         // data-target="south-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             South Africa-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "nz-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("nz-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="nz-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             New Zealand-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "sri-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("sri-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="sri-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Sri Lanka-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "west-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("west-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="west-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             West Indies-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "ban-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("ban-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="ban-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Bangladesh-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "pak-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("pak-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="pak-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Pakistan-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "Scot-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("Scot-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="Scot-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Scotland-W
                                         </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="lg:col-span-8 md:col-span-7">
+                            <div className="lg:col-span-8 md:col-span-7">
                                 <div id="aus-team" className={`team-content ${activeTeam === "aus-team" ? "" : "hidden"}`}>
                                     <p>I am Afg Team</p>
                                 </div>
 
                                 <div id="south-team" className={`team-content ${activeTeam === "south-team" ? "" : "hidden"}`}>
-                                    <div class="max-w-7xl mx-auto bg-white rounded-lg p-6">
-                                        <div class="flex items-center space-x-4 mb-6">
-                                            <img src="/assets/img/flag/b-5.png" alt="South Africa Flag" class="h-[45px] rounded-full" />
-                                            <h1 class="text-[16px] font-semibold text-gray-800">South Africa Women <span
-                                                class="text-gray-500">(15 players)</span></h1>
+                                    <div className="max-w-7xl mx-auto bg-white rounded-lg p-6">
+                                        <div className="flex items-center space-x-4 mb-6">
+                                            <img src="/assets/img/flag/b-5.png" alt="South Africa Flag" className="h-[45px] rounded-full" />
+                                            <h1 className="text-[16px] font-semibold text-gray-800">South Africa Women <span
+                                                className="text-gray-500">(15 players)</span></h1>
                                         </div>
 
 
-                                        <div class="space-y-6">
+                                        <div className="space-y-6">
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     Batsman</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-7.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-blue-500 ">L Wolvaardt<span
-                                                            class="text-blue-500">(c)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-blue-500 ">L Wolvaardt<span
+                                                            className="text-blue-500">(c)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-8.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">T Brits</h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">T Brits</h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-9.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-blue-500">M Ridder<span
-                                                            class="text-blue-500">(wk)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-blue-500">M Ridder<span
+                                                            className="text-blue-500">(wk)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-10.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">S Jafta<span
-                                                            class="text-blue-500">(wk)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">S Jafta<span
+                                                            className="text-blue-500">(wk)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4124,54 +4124,54 @@ const IplSeries = () => {
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     Bowler</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-11.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Hlubi</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Hlubi</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-12.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Khaka</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Khaka</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-13.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">N Mlaba</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">N Mlaba</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-14.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">T Sekhukhune</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">T Sekhukhune</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4179,130 +4179,130 @@ const IplSeries = () => {
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     All-Rounder</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-15.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Bosch</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Bosch</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-16.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">N Klerk</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">N Klerk</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-17.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Dercksen</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Dercksen</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-18.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-19.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-20.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-21.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="rounded-lg bg-[#ffffff] p-4 mt-4">
-                                    <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mt-4">
+                                    <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         News
                                     </h3>
 
-                                    <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                    <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                    <div class="lg:grid grid-cols-12 gap-4 mt-4">
+                                    <div className="lg:grid grid-cols-12 gap-4 mt-4">
 
 
-                                        <div class="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
+                                        <div className="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
                                             <img src="/assets/img/team-1.png" alt="Main news"
-                                                class="rounded-lg w-full h-48 object-cover mb-3" />
-                                            <h3 class="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
+                                                className="rounded-lg w-full h-48 object-cover mb-3" />
+                                            <h3 className="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
                                                 trounce</h3>
-                                            <p class="text-gray-500 font-normal">
+                                            <p className="text-gray-500 font-normal">
                                                 India will go into the home Test series against New Zealand with pretty much the
                                                 same squad that took on Bangladesh in September - India's last red-ball action
                                                 ahead
                                                 of the five-Test...
                                             </p>
 
-                                            <div class="border-l-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-l-[1px] border-[#E7F2F4]"></div>
 
                                         </div>
 
 
 
-                                        <div class="col-span-6">
+                                        <div className="col-span-6">
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-2.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-2.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
+                                                    <h4 className="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
                                                         Semifinal | WI-W Vs NZ-W Playing 11 Prediction</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4312,11 +4312,11 @@ const IplSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4325,15 +4325,15 @@ const IplSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-3.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-3.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
+                                                    <h4 className="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
                                                         Bosch Overpowers Australia To Guide South Africa.</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4343,11 +4343,11 @@ const IplSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4356,15 +4356,15 @@ const IplSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-4.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-4.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
+                                                    <h4 className="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
                                                         Today Match, Fantasy Cricket Tips, Pitch Report</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4374,11 +4374,11 @@ const IplSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> P Bhattachar <span class="ml-2 pr-[1px]">
+                                                    </span> P Bhattachar <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4399,14 +4399,14 @@ const IplSeries = () => {
                         jhds
                     </div>
                     <div id="news" className={`tab-content ${activeTab === 'news' ? '' : 'hidden'}`}>
-                        <div class="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
-                            <div class="lg:grid grid-cols-12 gap-4">
-                                <div class="col-span-6 ">
-                                    <img src="/assets/img/team-1.png" alt="Main news" class="rounded-lg w-full h-48 object-cover mb-3" />
+                        <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
+                            <div className="lg:grid grid-cols-12 gap-4">
+                                <div className="col-span-6 ">
+                                    <img src="/assets/img/team-1.png" alt="Main news" className="rounded-lg w-full h-48 object-cover mb-3" />
                                 </div>
-                                <div class="col-span-6">
-                                    <p class="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
-                                        class="ml-2 pr-[1px]">
+                                <div className="col-span-6">
+                                    <p className="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
+                                        className="ml-2 pr-[1px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
                                             viewBox="0 0 48 48">
                                             <polygon fill="#42a5f5"
@@ -4416,24 +4416,24 @@ const IplSeries = () => {
                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                             </polygon>
                                         </svg>
-                                    </span> Uc Team <span class="ml-2 pr-[1px]">
+                                    </span> Uc Team <span className="ml-2 pr-[1px]">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                 </path>
                                             </svg>
                                         </span> October 9, 2024</p>
-                                    <h3 class="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live - Jagadeesan hits
+                                    <h3 className="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live - Jagadeesan hits
                                         a century; Haryana trounce
                                     </h3>
-                                    <p class="text-gray-500 font-normal">India will go into the home Test series
+                                    <p className="text-gray-500 font-normal">India will go into the home Test series
                                         against New Zealand with pretty much the same squad that took on Bangladesh in September
                                         - India's last red-ball action ahead of the five-Test...</p>
-                                    <p class="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
+                                    <p className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
                                         more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-3 ml-2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                            strokeWidth="1.5" stroke="currentColor" className="size-3 ml-2">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                 d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"></path>
                                         </svg>
                                     </p>
@@ -4441,17 +4441,17 @@ const IplSeries = () => {
                             </div>
 
 
-                            <div class="lg:grid grid-cols-12 gap-4">
+                            <div className="lg:grid grid-cols-12 gap-4">
 
-                                <div class="col-span-6">
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                <div className="col-span-6">
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                            <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                 series in Australia to close out this year.into the home Test series
                                                 against</h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4461,10 +4461,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4472,16 +4472,16 @@ const IplSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to opt
+                                            <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to opt
                                                 central contract this is cricket
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4491,10 +4491,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4503,16 +4503,16 @@ const IplSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                            <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                 really took off, they have some reflecting to do.
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4522,10 +4522,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4535,15 +4535,15 @@ const IplSeries = () => {
                                     </div>
                                 </div>
 
-                                <div class="col-span-6">
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                <div className="col-span-6">
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                            <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                 series in Australia to close out this year.into the home Test series
                                                 against</h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4553,10 +4553,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4564,16 +4564,16 @@ const IplSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to opt
+                                            <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to opt
                                                 central contract this is cricket
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4583,10 +4583,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4595,16 +4595,16 @@ const IplSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                            <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                 really took off, they have some reflecting to do.
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4614,10 +4614,10 @@ const IplSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4630,10 +4630,10 @@ const IplSeries = () => {
                             </div>
 
                             <div
-                                class="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
+                                className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
                                 More from News <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-3 ml-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                    strokeWidth="1.5" stroke="currentColor" className="size-3 ml-2">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
                                         d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"></path>
                                 </svg>
                             </div>

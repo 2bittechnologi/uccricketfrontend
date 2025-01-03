@@ -1,5 +1,6 @@
 import Layout from '@/Components/Layout'
 import WeeklySlider from '@/Components/WeeklySlider';
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const KKRSeries = () => {
@@ -40,7 +41,7 @@ const KKRSeries = () => {
     return (
         <Layout>
             <section className="bg-[#0E2149]">
-                <div className="lg:w-[1000px] mx-auto text-white md:pt-10 pt-5 pb-10">
+                <div className="lg:w-[1000px] mx-auto text-white pt-5 pb-10" style={{ paddingTop: "37px" }}>
                     <div className="flex items-center justify-between md:p-4 max-w-6xl mx-auto">
                         {/* Left Arrow */}
                         <button className="md:block hidden p-2 bg-gray-700 rounded-full hover:bg-gray-600">
@@ -217,54 +218,54 @@ const KKRSeries = () => {
                     </div>
                 </div>
             </section>
-            <section class="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
-                <div id="tabs" class="my-4">
-                    <div class="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
+            <section className="lg:w-[1000px] mx-auto md:mb-0 mb-4 px-2 lg:px-0">
+                <div id="tabs" className="my-4">
+                    <div className="flex text-1xl space-x-8 p-2 bg-[#ffffff] rounded-lg overflow-auto">
                         <button
                             // onclick="handleTabClick(event, 'info')"
-                            //     class="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
+                            //     className="font-medium py-2 px-3 whitespace-nowrap bg-[#1A80F8] text-white rounded-md"
                             onClick={(e) => handleTabClick(e, 'info')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'info' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             Overview
                         </button>
                         <button
-                            // onclick="handleTabClick(event, 'schedule&results')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            // onclick="handleTabClick(event, 'schedule&results')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'schedule&results')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'schedule&results' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             Schedule & Results
                         </button>
                         <button
-                            // onclick="handleTabClick(event, 'squads')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            // onclick="handleTabClick(event, 'squads')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'squads')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'squads' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             Squads
                         </button>
                         <button
-                            // onclick="handleTabClick(event, 'pointstable')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            // onclick="handleTabClick(event, 'pointstable')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'pointstable')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'pointstable' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             Points Table
                         </button>
                         <button
-                            // onclick="handleTabClick(event, 'news')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            // onclick="handleTabClick(event, 'news')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'news')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'news' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             News
                         </button>
                         <button
-                            //  onclick="handleTabClick(event, 'stats')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            //  onclick="handleTabClick(event, 'stats')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'stats')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'stats' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
                             Stats
                         </button>
                         <button
-                            //  onclick="handleTabClick(event, 'stadiums')" class="font-medium py-2 px-3 whitespace-nowrap"
+                            //  onclick="handleTabClick(event, 'stadiums')" className="font-medium py-2 px-3 whitespace-nowrap"
                             onClick={(e) => handleTabClick(e, 'stadiums')}
                             className={`font-medium py-2 px-3 whitespace-nowrap ${activeTab === 'stadiums' ? 'bg-[#1A80F8] text-white' : ''} rounded-md`}
                         >
@@ -275,98 +276,98 @@ const KKRSeries = () => {
                 <div id="tab-content">
                     <div id="info" className={`tab-content ${activeTab === 'info' ? '' : 'hidden'}`}>
 
-                        <div class="md:grid grid-cols-12 gap-4">
-                            <div class="lg:col-span-8 md:col-span-7">
-                                <div class="rounded-lg bg-white mb-4">
-                                    <div class="p-4">
-                                        <h3 class="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                        <div className="md:grid grid-cols-12 gap-4">
+                            <div className="lg:col-span-8 md:col-span-7">
+                                <div className="rounded-lg bg-white mb-4">
+                                    <div className="p-4">
+                                        <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                             Info
                                         </h3>
-                                        <div class="border-t border-[#E4E9F0]"></div>
+                                        <div className="border-t border-[#E4E9F0]"></div>
 
                                         {/* <!-- Responsive Grid Section --> */}
-                                        <div class="grid gap-2 grid-cols-1 py-3 px-2">
-                                            <div class="flex items-center gap-16">
-                                                <h2 class="font-normal text-[#586577]">Coach :</h2>
-                                                <p class="text-[14px] font-medium">Unknown </p>
+                                        <div className="grid gap-2 grid-cols-1 py-3 px-2">
+                                            <div className="flex items-center gap-16">
+                                                <h2 className="font-normal text-[#586577]">Coach :</h2>
+                                                <p className="text-[14px] font-medium">Unknown </p>
                                             </div>
-                                            <div class="flex items-center gap-12">
-                                                <h2 class="font-normal text-[#586577]">Country :</h2>
-                                                <p class="text-[14px] font-medium flex gap-[3px]"><img src="/assets/img/flag/17.png"
-                                                    class="h-[20px]" alt="" /> <span> India </span></p>
+                                            <div className="flex items-center gap-12">
+                                                <h2 className="font-normal text-[#586577]">Country :</h2>
+                                                <p className="text-[14px] font-medium flex gap-[3px]"><img src="/assets/img/flag/17.png"
+                                                    className="h-[20px]" alt="" /> <span> India </span></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="rounded-lg bg-white">
-                                    <div class="p-4">
-                                        <h3 class="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-white">
+                                    <div className="p-4">
+                                        <h3 className="text-[15px] font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                             Venue
                                         </h3>
-                                        <div class="border-t border-[#E4E9F0]"></div>
+                                        <div className="border-t border-[#E4E9F0]"></div>
 
                                         {/* <!-- Responsive Grid Section --> */}
-                                        <div class="grid gap-2 grid-cols-1 py-3 px-2">
-                                            <div class="flex items-center gap-16">
-                                                <h2 class="font-normal text-[#586577]">Name :</h2>
-                                                <p class="text-[14px] font-medium"> Eden Gardens </p>
+                                        <div className="grid gap-2 grid-cols-1 py-3 px-2">
+                                            <div className="flex items-center gap-16">
+                                                <h2 className="font-normal text-[#586577]">Name :</h2>
+                                                <p className="text-[14px] font-medium"> Eden Gardens </p>
                                             </div>
-                                            <div class="flex items-center gap-12">
-                                                <h2 class="font-normal text-[#586577]">Capacity :</h2>
-                                                <p class="text-[14px] font-medium"> 66000</p>
+                                            <div className="flex items-center gap-12">
+                                                <h2 className="font-normal text-[#586577]">Capacity :</h2>
+                                                <p className="text-[14px] font-medium"> 66000</p>
                                             </div>
 
-                                            <div class="flex items-center gap-14">
-                                                <h2 class="font-normal text-[#586577]">City :</h2>
-                                                <p class="text-[14px] font-medium"> Kolkata, India</p>
+                                            <div className="flex items-center gap-14">
+                                                <h2 className="font-normal text-[#586577]">City :</h2>
+                                                <p className="text-[14px] font-medium"> Kolkata, India</p>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="rounded-lg bg-[#ffffff] my-4 p-4">
+                                <div className="rounded-lg bg-[#ffffff] my-4 p-4">
 
-                                    <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                    <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         Last Match Result
                                     </h3>
 
 
                                     {/* <!-- Featured Matches desktop view  --> */}
-                                    <div class="border-t-[1px] border-[#E4E9F0]"></div>
-                                    <div class="hidden lg:block">
-                                        <div class="py-3 flex justify-between items-center">
-                                            <div class="flex space-x-2 font-medium	w-full">
-                                                <div class="flex items-center space-x-1 flex-col">
-                                                    <img src="/assets/img/ipl/b-5.png" class="h-[35px] rounded-full" alt="csk" />
-                                                    <span class="text-[#909090]">CSK</span>
+                                    <div className="border-t-[1px] border-[#E4E9F0]"></div>
+                                    <div className="hidden lg:block">
+                                        <div className="py-3 flex justify-between items-center">
+                                            <div className="flex space-x-2 font-medium	w-full">
+                                                <div className="flex items-center space-x-1 flex-col">
+                                                    <img src="/assets/img/ipl/b-5.png" className="h-[35px] rounded-full" alt="csk" />
+                                                    <span className="text-[#909090]">CSK</span>
                                                 </div>
-                                                <div class="mt-1">
-                                                    <p class="text-1xl font-semibold">120/8</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1">
+                                                    <p className="text-1xl font-semibold">120/8</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
 
                                                 </div>
 
                                             </div>
 
-                                            <div class=" font-semibold text-center w-full">
-                                                <p class="text-[#3D4DCF] text-[14px]">KKR Won</p>
-                                                <p class="text-[#909090] text-[12px] font-normal">2nd Semi Final WT20 World Cup
+                                            <div className=" font-semibold text-center w-full">
+                                                <p className="text-[#3D4DCF] text-[14px]">KKR Won</p>
+                                                <p className="text-[#909090] text-[12px] font-normal">2nd Semi Final WT20 World Cup
                                                     2024</p>
                                             </div>
 
-                                            <div class="flex space-x-2 font-medium justify-end w-full">
+                                            <div className="flex space-x-2 font-medium justify-end w-full">
 
-                                                <div class="mt-1 text-end">
-                                                    <p class="text-1xl font-semibold">128/9</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1 text-end">
+                                                    <p className="text-1xl font-semibold">128/9</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
 
                                                 </div>
 
-                                                <div class="flex items-center space-x-1 flex-col font-medium">
-                                                    <img src="/assets/img/ipl/b-2.png" class="h-[35px] rounded-full" alt="nz" />
-                                                    <span class="text-[#909090]">SRH</span>
+                                                <div className="flex items-center space-x-1 flex-col font-medium">
+                                                    <img src="/assets/img/ipl/b-2.png" className="h-[35px] rounded-full" alt="nz" />
+                                                    <span className="text-[#909090]">SRH</span>
                                                 </div>
 
                                             </div>
@@ -375,30 +376,30 @@ const KKRSeries = () => {
 
 
 
-                                        <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                        <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                        <h3 class="text-1xl font-semibold mt-2">
+                                        <h3 className="text-1xl font-semibold mt-2">
                                             Upcoming Match
                                         </h3>
 
-                                        <div class="py-3 pb-0 flex justify-between items-center">
-                                            <div class="flex space-x-2 font-medium	w-full">
-                                                <div class="flex items-center space-x-1 flex-row">
-                                                    <img src="/assets/img/ipl/b-3.png" class="h-[35px] rounded-full" alt="wiw" />
-                                                    <span class="text-[#909090]">RR</span>
+                                        <div className="py-3 pb-0 flex justify-between items-center">
+                                            <div className="flex space-x-2 font-medium	w-full">
+                                                <div className="flex items-center space-x-1 flex-row">
+                                                    <img src="/assets/img/ipl/b-3.png" className="h-[35px] rounded-full" alt="wiw" />
+                                                    <span className="text-[#909090]">RR</span>
                                                 </div>
                                             </div>
 
-                                            <div class=" font-semibold text-center w-full">
-                                                <p class="text-[#414143] text-[14px]">Final T20 on</p>
-                                                <p class="text-[#909090] text-[12px] font-normal">Oct 20, 7:30 PM</p>
+                                            <div className=" font-semibold text-center w-full">
+                                                <p className="text-[#414143] text-[14px]">Final T20 on</p>
+                                                <p className="text-[#909090] text-[12px] font-normal">Oct 20, 7:30 PM</p>
                                             </div>
 
-                                            <div class="flex space-x-2 font-medium justify-end w-full">
+                                            <div className="flex space-x-2 font-medium justify-end w-full">
 
-                                                <div class="flex items-center gap-1 flex-row-reverse font-medium">
-                                                    <img src="/assets/img/ipl/b-4.png" class="h-[35px] rounded-full" alt="nz" />
-                                                    <span class="text-[#909090]">RCB</span>
+                                                <div className="flex items-center gap-1 flex-row-reverse font-medium">
+                                                    <img src="/assets/img/ipl/b-4.png" className="h-[35px] rounded-full" alt="nz" />
+                                                    <span className="text-[#909090]">RCB</span>
                                                 </div>
 
                                             </div>
@@ -413,41 +414,41 @@ const KKRSeries = () => {
 
                                     {/* <!-- Featured Matches responsive view view  --> */}
 
-                                    <div class="lg:hidden">
-                                        <div class="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p class="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
+                                    <div className="lg:hidden">
+                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
+                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
                                                 2024
                                             </p>
-                                            <div class="flex justify-between items-center">
-                                                <div class="">
+                                            <div className="flex justify-between items-center">
+                                                <div className="">
                                                     <div
-                                                        class="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-1.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">CSK</span>
+                                                        className="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-1.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">CSK</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">120/8</p>
-                                                            <p class="text-[#909090]">(20.0 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">120/8</p>
+                                                            <p className="text-[#909090]">(20.0 overs)</p>
                                                         </div>
                                                     </div>
 
-                                                    <div class="flex space-x-2 items-start font-medium w-[162px] md:w-full">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-2.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">SRH</span>
+                                                    <div className="flex space-x-2 items-start font-medium w-[162px] md:w-full">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-2.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">SRH</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">128/9</p>
-                                                            <p class="text-[#909090]">(20.0 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">128/9</p>
+                                                            <p className="text-[#909090]">(20.0 overs)</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
 
-                                                <div class=" font-semibold text-right">
-                                                    <p class="text-[#3D4DCF]">KKR Won</p>
+                                                <div className=" font-semibold text-right">
+                                                    <p className="text-[#3D4DCF]">KKR Won</p>
 
                                                 </div>
 
@@ -456,34 +457,34 @@ const KKRSeries = () => {
 
 
 
-                                        <div class="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p class="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
+                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
+                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
                                                 2024
                                             </p>
-                                            <div class="flex justify-between items-center">
-                                                <div class="">
+                                            <div className="flex justify-between items-center">
+                                                <div className="">
                                                     <div
-                                                        class="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
-                                                        <div class="flex items-center space-x-1 ">
-                                                            <img src="/assets/img/ipl/b-3.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">RR</span>
+                                                        className="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
+                                                        <div className="flex items-center space-x-1 ">
+                                                            <img src="/assets/img/ipl/b-3.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">RR</span>
                                                         </div>
 
                                                     </div>
 
-                                                    <div class="flex space-x-2 items-start font-medium w-[162px] md:w-full">
-                                                        <div class="flex items-center space-x-1 ">
-                                                            <img src="/assets/img/ipl/b-4.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">RCB</span>
+                                                    <div className="flex space-x-2 items-start font-medium w-[162px] md:w-full">
+                                                        <div className="flex items-center space-x-1 ">
+                                                            <img src="/assets/img/ipl/b-4.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">RCB</span>
                                                         </div>
 
                                                     </div>
                                                 </div>
 
-                                                <div class="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
 
-                                                <div class=" font-semibold text-right">
-                                                    <p class="text-[#414143]">Final T20 on</p>
+                                                <div className=" font-semibold text-right">
+                                                    <p className="text-[#414143]">Final T20 on</p>
                                                 </div>
 
                                             </div>
@@ -495,72 +496,72 @@ const KKRSeries = () => {
 
 
 
-                                <div class="rounded-lg bg-[#ffffff] mb-2 p-4">
-                                    <h3 class="text-1xl font-semibold mb-3 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-[#ffffff] mb-2 p-4">
+                                    <h3 className="text-1xl font-semibold mb-3 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         IPl 2024 Pointe Table
                                     </h3>
 
                                     <div>
-                                        <div class="overflow-x-auto  [&amp;::-webkit-scrollbar] [&amp;::-webkit-scrollbar]:h-[5px] 
+                                        <div className="overflow-x-auto  [&amp;::-webkit-scrollbar] [&amp;::-webkit-scrollbar]:h-[5px] 
                         [&amp;::-webkit-scrollbar-track]:bg-gray-100 
                         [&amp;::-webkit-scrollbar-thumb]:bg-[#DFE9F6] 
                         dark:[&amp;::-webkit-scrollbar-track]:bg-neutral-700 
                         dark:[&amp;::-webkit-scrollbar-thumb]:bg-neutral-500">
-                                            <table class="w-full text-sm text-left text-gray-500 whitespace-nowrap">
-                                                <thead class="bg-blue-50 text-gray-700 ">
+                                            <table className="w-full text-sm text-left text-gray-500 whitespace-nowrap">
+                                                <thead className="bg-blue-50 text-gray-700 ">
                                                     <tr>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium w-[10px]">No</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Team</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">M</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">W</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">L</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">T</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">N/R</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">PTS</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Net RR</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Form</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium w-[10px]">No</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Team</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">M</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">W</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">L</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">T</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">N/R</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">PTS</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Net RR</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Form</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="divide-y divide-gray-200">
+                                                <tbody className="divide-y divide-gray-200">
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">1</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">1</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
                                                             <Link href="/kkrSeries">
-                                                                <div class="flex items-center gap-[5px] w-[120px]">
+                                                                <div className="flex items-center gap-[5px] w-[120px]">
                                                                     <div>
-                                                                        <img src="/assets/img/ipl/1.png" class="h-[20px]" alt="" />
+                                                                        <img src="/assets/img/ipl/1.png" className="h-[20px]" alt="" />
                                                                     </div>
                                                                     <p>
-                                                                        KKR<span class="text-[#00B564]"> (Q)</span>
+                                                                        KKR<span className="text-[#00B564]"> (Q)</span>
                                                                     </p>
                                                                 </div>
                                                             </Link>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -571,42 +572,42 @@ const KKRSeries = () => {
 
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">2</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">2</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/2.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/2.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
-                                                                    SH<span class="text-[#00B564]"> (Q)</span>
+                                                                    SH<span className="text-[#00B564]"> (Q)</span>
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -616,42 +617,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">3</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">3</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/3.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/3.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
-                                                                    RR<span class="text-[#00B564]"> (Q)</span>
+                                                                    RR<span className="text-[#00B564]"> (Q)</span>
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -661,42 +662,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">4</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">4</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/4.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/4.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
-                                                                    RCB<span class="text-[#00B564]"> (Q)</span>
+                                                                    RCB<span className="text-[#00B564]"> (Q)</span>
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -706,42 +707,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/5.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/5.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     CSK
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -751,42 +752,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">6</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">6</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/6.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/6.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     DC
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -796,42 +797,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">7</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">7</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/7.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/7.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     LSG
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -841,42 +842,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">8</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">8</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/8.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/8.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     GT
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -886,42 +887,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/9.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/9.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     PK
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -931,42 +932,42 @@ const KKRSeries = () => {
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="md:px-2 pl-[14px] py-3 w-[10px]">10</td>
-                                                        <td class="md:px-2 pl-[14px] py-3 text-[#217AF7]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="md:px-2 pl-[14px] py-3 w-[10px]">10</td>
+                                                        <td className="md:px-2 pl-[14px] py-3 text-[#217AF7]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/ipl/10.png" class="h-[20px]" alt="" />
+                                                                    <img src="/assets/img/ipl/10.png" className="h-[20px]" alt="" />
                                                                 </div>
                                                                 <p>
                                                                     MI
                                                                 </p>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">5</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">123</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">9</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">0</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">74.65</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="ml-auto flex gap-2 items-center">
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">5</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">123</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">9</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">0</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">74.65</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="ml-auto flex gap-2 items-center">
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
+                                                                    className="bg-[#F63636] text-white text-[13px] px-[4px] py-[0px] rounded">L</span>
                                                                 <span
-                                                                    class="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
-                                                                <span class="flex">
-                                                                    <button class="arro-button">
+                                                                    className="bg-[#13B76D] text-white text-[13px] px-[4px] py-[0px] rounded">W</span>
+                                                                <span className="flex">
+                                                                    <button className="arro-button">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                                            stroke="currentColor" class="size-4">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                            viewBox="0 0 24 24" strokeWidth="1.5"
+                                                                            stroke="currentColor" className="size-4">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                                                 d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                                                                         </svg>
 
@@ -985,18 +986,18 @@ const KKRSeries = () => {
                                 </div>
 
 
-                                <div class="rounded-lg bg-[#ffffff] mb-2 p-4">
-                                    <div class="mb-3 flex justify-between items-center">
-                                        <h3 class="text-1xl font-semibold pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-[#ffffff] mb-2 p-4">
+                                    <div className="mb-3 flex justify-between items-center">
+                                        <h3 className="text-1xl font-semibold pl-[7px] border-l-[3px] border-[#229ED3]">
                                             Top Player
                                         </h3>
                                         <div>
-                                            <select class="border-[1px] rounded-sm" name="" id="">
+                                            <select className="border-[1px] rounded-sm" name="" id="">
                                                 <option value="">Indian Premier League</option>
                                                 <option value="1">Player 1</option>
                                                 <option value="2">Player 2</option>
                                             </select>
-                                            <select name="" id="" class="border-[1px] rounded-sm">
+                                            <select name="" id="" className="border-[1px] rounded-sm">
                                                 <option value="">2024</option>
                                                 <option value="1">Player 1</option>
                                                 <option value="2">Player 2</option>
@@ -1005,140 +1006,140 @@ const KKRSeries = () => {
                                     </div>
 
                                     <div>
-                                        <div class="overflow-x-auto  [&amp;::-webkit-scrollbar] [&amp;::-webkit-scrollbar]:h-[5px] 
+                                        <div className="overflow-x-auto  [&amp;::-webkit-scrollbar] [&amp;::-webkit-scrollbar]:h-[5px] 
                         [&amp;::-webkit-scrollbar-track]:bg-gray-100 
                         [&amp;::-webkit-scrollbar-thumb]:bg-[#DFE9F6] 
                         dark:[&amp;::-webkit-scrollbar-track]:bg-neutral-700 
                         dark:[&amp;::-webkit-scrollbar-thumb]:bg-neutral-500">
-                                            <table class="w-full text-sm text-left text-gray-500 whitespace-nowrap">
-                                                <thead class="bg-blue-50 text-gray-700 ">
+                                            <table className="w-full text-sm text-left text-gray-500 whitespace-nowrap">
+                                                <thead className="bg-blue-50 text-gray-700 ">
                                                     <tr>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium w-[10px]">Player</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Mat</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Inns</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">HS</th>
-                                                        <th class="md:px-2 pl-[14px] py-3 font-medium">Avg</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium w-[10px]">Player</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Mat</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Inns</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">HS</th>
+                                                        <th className="md:px-2 pl-[14px] py-3 font-medium">Avg</th>
 
 
                                                     </tr>
                                                 </thead>
-                                                <tbody class="divide-y divide-gray-200">
-                                                    <tr class="">
+                                                <tbody className="divide-y divide-gray-200">
+                                                    <tr className="">
 
-                                                        <td class="md:px-2 pl-[14px] py-3">
-                                                            <div class="flex items-center gap-[5px] md:w-[240px] w-[185px]">
+                                                        <td className="md:px-2 pl-[14px] py-3">
+                                                            <div className="flex items-center gap-[5px] md:w-[240px] w-[185px]">
                                                                 <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
                                                                 </div>
                                                                 <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">S Narine</p>
-                                                                    <p class="text-[12px]">All Rounder</p>
+                                                                    <p className="text-[#3e3e3e] font-medium">S Narine</p>
+                                                                    <p className="text-[12px]">All Rounder</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
 
                                                     </tr>
                                                     <tr>
 
-                                                        <td class="px-3 py-3">
-                                                            <div class="flex items-center gap-[5px] md:w-[240px] w-[185px]">
+                                                        <td className="px-3 py-3">
+                                                            <div className="flex items-center gap-[5px] md:w-[240px] w-[185px]">
                                                                 <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
                                                                 </div>
                                                                 <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">Riyan Parag</p>
-                                                                    <p class="text-[12px]">Batter</p>
+                                                                    <p className="text-[#3e3e3e] font-medium">Riyan Parag</p>
+                                                                    <p className="text-[12px]">Batter</p>
                                                                 </div>
 
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
 
                                                     </tr>
-                                                    <tr class="bg-[#FFF9F5]">
-                                                        <td class="px-3 py-3 md:w-[240px] w-[185px]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                    <tr className="bg-[#FFF9F5]">
+                                                        <td className="px-3 py-3 md:w-[240px] w-[185px]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
                                                                 </div>
                                                                 <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">V Iyer</p>
-                                                                    <p class="text-[12px]">Batter</p>
-                                                                </div>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="px-3 py-3 md:w-[240px] w-[185px]">
-                                                            <div class="flex items-center gap-[5px]">
-                                                                <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
-                                                                </div>
-                                                                <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">Shreyas Iyer</p>
-                                                                    <p class="text-[12px]">Batter</p>
+                                                                    <p className="text-[#3e3e3e] font-medium">V Iyer</p>
+                                                                    <p className="text-[12px]">Batter</p>
                                                                 </div>
 
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
 
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="px-3 py-3 md:w-[240px] w-[185px]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="px-3 py-3 md:w-[240px] w-[185px]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
                                                                 </div>
                                                                 <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">A Russell</p>
-                                                                    <p class="text-[12px]">All Rounder</p>
+                                                                    <p className="text-[#3e3e3e] font-medium">Shreyas Iyer</p>
+                                                                    <p className="text-[12px]">Batter</p>
                                                                 </div>
 
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
 
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="px-3 py-3 md:w-[240px] w-[185px]">
-                                                            <div class="flex items-center gap-[5px]">
+                                                        <td className="px-3 py-3 md:w-[240px] w-[185px]">
+                                                            <div className="flex items-center gap-[5px]">
                                                                 <div>
-                                                                    <img src="/assets/img/player/8.png" class="h-[33px]" alt="" />
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
                                                                 </div>
                                                                 <div>
-                                                                    <p class="text-[#3e3e3e] font-medium">Rinku Singh</p>
-                                                                    <p class="text-[12px]">Batter</p>
+                                                                    <p className="text-[#3e3e3e] font-medium">A Russell</p>
+                                                                    <p className="text-[12px]">All Rounder</p>
                                                                 </div>
 
                                                             </div>
                                                         </td>
-                                                        <td class="md:px-2 pl-[14px] py-3">15</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">741</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">113</td>
-                                                        <td class="md:px-2 pl-[14px] py-3">45.50</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td className="px-3 py-3 md:w-[240px] w-[185px]">
+                                                            <div className="flex items-center gap-[5px]">
+                                                                <div>
+                                                                    <img src="/assets/img/player/8.png" className="h-[33px]" alt="" />
+                                                                </div>
+                                                                <div>
+                                                                    <p className="text-[#3e3e3e] font-medium">Rinku Singh</p>
+                                                                    <p className="text-[12px]">Batter</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </td>
+                                                        <td className="md:px-2 pl-[14px] py-3">15</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">741</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">113</td>
+                                                        <td className="md:px-2 pl-[14px] py-3">45.50</td>
 
                                                     </tr>
 
@@ -1151,47 +1152,47 @@ const KKRSeries = () => {
 
 
 
-                                <div class="rounded-lg bg-[#ffffff] mb-4 p-4">
+                                <div className="rounded-lg bg-[#ffffff] mb-4 p-4">
 
-                                    <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                    <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         Kolkata knight Rider 2024
                                     </h3>
 
 
                                     {/* <!-- Featured Matches desktop view  --> */}
-                                    <div class="border-t-[1px] border-[#E4E9F0]"></div>
-                                    <div class="hidden lg:block">
-                                        <div class="py-3 flex justify-between items-center">
-                                            <div class="flex space-x-2 font-medium	w-full">
-                                                <div class="flex items-center space-x-1 flex-col">
-                                                    <img src="/assets/img/ipl/b-1.png" class="h-[35px] rounded-full" alt="csk" />
-                                                    <span class="text-[#909090]">CSK</span>
+                                    <div className="border-t-[1px] border-[#E4E9F0]"></div>
+                                    <div className="hidden lg:block">
+                                        <div className="py-3 flex justify-between items-center">
+                                            <div className="flex space-x-2 font-medium	w-full">
+                                                <div className="flex items-center space-x-1 flex-col">
+                                                    <img src="/assets/img/ipl/b-1.png" className="h-[35px] rounded-full" alt="csk" />
+                                                    <span className="text-[#909090]">CSK</span>
                                                 </div>
-                                                <div class="mt-1">
-                                                    <p class="text-1xl font-semibold">120/8</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1">
+                                                    <p className="text-1xl font-semibold">120/8</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
 
                                                 </div>
 
                                             </div>
 
-                                            <div class=" font-semibold text-center w-full">
-                                                <p class="text-[#3D4DCF] text-[14px]">KKR Won</p>
-                                                <p class="text-[#909090] text-[12px] font-normal">2nd Semi Final WT20 World Cup
+                                            <div className=" font-semibold text-center w-full">
+                                                <p className="text-[#3D4DCF] text-[14px]">KKR Won</p>
+                                                <p className="text-[#909090] text-[12px] font-normal">2nd Semi Final WT20 World Cup
                                                     2024</p>
                                             </div>
 
-                                            <div class="flex space-x-2 font-medium justify-end w-full">
+                                            <div className="flex space-x-2 font-medium justify-end w-full">
 
-                                                <div class="mt-1 text-end">
-                                                    <p class="text-1xl font-semibold">128/9</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1 text-end">
+                                                    <p className="text-1xl font-semibold">128/9</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
 
                                                 </div>
 
-                                                <div class="flex items-center space-x-1 flex-col font-medium">
-                                                    <img src="/assets/img/ipl/b-5.png" class="h-[35px] rounded-full" alt="nz" />
-                                                    <span class="text-[#909090]">KKR</span>
+                                                <div className="flex items-center space-x-1 flex-col font-medium">
+                                                    <img src="/assets/img/ipl/b-5.png" className="h-[35px] rounded-full" alt="nz" />
+                                                    <span className="text-[#909090]">KKR</span>
                                                 </div>
 
                                             </div>
@@ -1200,39 +1201,39 @@ const KKRSeries = () => {
 
 
 
-                                        <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                        <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                        <div class="py-3 flex justify-between items-center">
-                                            <div class="flex space-x-2 font-medium	w-full">
-                                                <div class="flex items-center space-x-1 flex-col">
-                                                    <img src="/assets/img/ipl/b-2.png" class="h-[35px] rounded-full" alt="srh" />
-                                                    <span class="text-[#909090]">SRH</span>
+                                        <div className="py-3 flex justify-between items-center">
+                                            <div className="flex space-x-2 font-medium	w-full">
+                                                <div className="flex items-center space-x-1 flex-col">
+                                                    <img src="/assets/img/ipl/b-2.png" className="h-[35px] rounded-full" alt="srh" />
+                                                    <span className="text-[#909090]">SRH</span>
                                                 </div>
-                                                <div class="mt-1">
-                                                    <p class="text-1xl font-semibold">134/5</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1">
+                                                    <p className="text-1xl font-semibold">134/5</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
 
                                                 </div>
 
                                             </div>
 
-                                            <div class=" font-semibold text-center w-full">
-                                                <p class="text-[#3D4DCF] text-[14px]">SRH Won</p>
-                                                <p class="text-[#909090] text-[12px] font-normal">1st Semi Final WT20 World Cup
+                                            <div className=" font-semibold text-center w-full">
+                                                <p className="text-[#3D4DCF] text-[14px]">SRH Won</p>
+                                                <p className="text-[#909090] text-[12px] font-normal">1st Semi Final WT20 World Cup
                                                     2024</p>
                                             </div>
 
-                                            <div class="flex space-x-2 font-medium justify-end w-full">
+                                            <div className="flex space-x-2 font-medium justify-end w-full">
 
-                                                <div class="mt-1 text-end">
-                                                    <p class="text-1xl font-semibold">135/2</p>
-                                                    <p class="text-[#909090]">(17.2 overs)</p>
+                                                <div className="mt-1 text-end">
+                                                    <p className="text-1xl font-semibold">135/2</p>
+                                                    <p className="text-[#909090]">(17.2 overs)</p>
 
                                                 </div>
 
-                                                <div class="flex items-center space-x-1 flex-col font-medium">
-                                                    <img src="/assets/img/ipl/b-5.png" class="h-[35px] rounded-full" alt="nz" />
-                                                    <span class="text-[#909090]">KKR</span>
+                                                <div className="flex items-center space-x-1 flex-col font-medium">
+                                                    <img src="/assets/img/ipl/b-5.png" className="h-[35px] rounded-full" alt="nz" />
+                                                    <span className="text-[#909090]">KKR</span>
                                                 </div>
 
                                             </div>
@@ -1240,38 +1241,38 @@ const KKRSeries = () => {
                                         </div>
 
 
-                                        <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                        <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
 
-                                        <div class="py-3 flex justify-between items-center">
-                                            <div class="flex space-x-2 font-medium	w-full">
-                                                <div class="flex items-center space-x-1 flex-col">
-                                                    <img src="/assets/img/ipl/b-3.png" class="h-[35px] rounded-full" alt="srh" />
-                                                    <span class="text-[#909090]">RR</span>
+                                        <div className="py-3 flex justify-between items-center">
+                                            <div className="flex space-x-2 font-medium	w-full">
+                                                <div className="flex items-center space-x-1 flex-col">
+                                                    <img src="/assets/img/ipl/b-3.png" className="h-[35px] rounded-full" alt="srh" />
+                                                    <span className="text-[#909090]">RR</span>
                                                 </div>
-                                                <div class="mt-1">
-                                                    <p class="text-1xl font-semibold">134/5</p>
-                                                    <p class="text-[#909090]">(20.0 overs)</p>
+                                                <div className="mt-1">
+                                                    <p className="text-1xl font-semibold">134/5</p>
+                                                    <p className="text-[#909090]">(20.0 overs)</p>
                                                 </div>
                                             </div>
 
-                                            <div class=" font-semibold text-center w-full">
-                                                <p class="text-[#3D4DCF] text-[14px]">SRH Won</p>
-                                                <p class="text-[#909090] text-[12px] font-normal">1st Semi Final WT20 World Cup
+                                            <div className=" font-semibold text-center w-full">
+                                                <p className="text-[#3D4DCF] text-[14px]">SRH Won</p>
+                                                <p className="text-[#909090] text-[12px] font-normal">1st Semi Final WT20 World Cup
                                                     2024</p>
                                             </div>
 
-                                            <div class="flex space-x-2 font-medium justify-end w-full">
+                                            <div className="flex space-x-2 font-medium justify-end w-full">
 
-                                                <div class="mt-1 text-end">
-                                                    <p class="text-1xl font-semibold">135/2</p>
-                                                    <p class="text-[#909090]">(17.2 overs)</p>
+                                                <div className="mt-1 text-end">
+                                                    <p className="text-1xl font-semibold">135/2</p>
+                                                    <p className="text-[#909090]">(17.2 overs)</p>
 
                                                 </div>
 
-                                                <div class="flex items-center space-x-1 flex-col font-medium">
-                                                    <img src="/assets/img/ipl/b-5.png" class="h-[35px] rounded-full" alt="nz" />
-                                                    <span class="text-[#909090]">KKR</span>
+                                                <div className="flex items-center space-x-1 flex-col font-medium">
+                                                    <img src="/assets/img/ipl/b-5.png" className="h-[35px] rounded-full" alt="nz" />
+                                                    <span className="text-[#909090]">KKR</span>
                                                 </div>
 
                                             </div>
@@ -1285,115 +1286,115 @@ const KKRSeries = () => {
 
                                     {/* <!-- Featured Matches responsive view view  --> */}
 
-                                    <div class="lg:hidden">
-                                        <div class="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p class="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
+                                    <div className="lg:hidden">
+                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
+                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
                                                 2024
                                             </p>
-                                            <div class="flex justify-between items-center">
-                                                <div class="">
+                                            <div className="flex justify-between items-center">
+                                                <div className="">
                                                     <div
-                                                        class="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-1.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">CSK</span>
+                                                        className="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-1.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">CSK</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">120/8</p>
-                                                            <p class="text-[#909090]">(20.0 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">120/8</p>
+                                                            <p className="text-[#909090]">(20.0 overs)</p>
                                                         </div>
                                                     </div>
 
-                                                    <div class="flex space-x-2 items-start font-medium w-[162px] md:w-full">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-2.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">SRH</span>
+                                                    <div className="flex space-x-2 items-start font-medium w-[162px] md:w-full">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-2.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">SRH</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">128/9</p>
-                                                            <p class="text-[#909090]">(20.0 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">128/9</p>
+                                                            <p className="text-[#909090]">(20.0 overs)</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
 
-                                                <div class=" font-semibold text-right">
-                                                    <p class="text-[#3D4DCF]">KKR Won</p>
+                                                <div className=" font-semibold text-right">
+                                                    <p className="text-[#3D4DCF]">KKR Won</p>
 
                                                 </div>
 
                                             </div>
                                         </div>
 
-                                        <div class="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p class="text-[#909090] text-[12px] mb-4 font-normal">1st Semi Final WT20 World Cup
+                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
+                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">1st Semi Final WT20 World Cup
                                                 2024
                                             </p>
-                                            <div class="flex justify-between items-center">
-                                                <div class="">
+                                            <div className="flex justify-between items-center">
+                                                <div className="">
                                                     <div
-                                                        class="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-2.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">SRH</span>
+                                                        className="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-2.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">SRH</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">134/5</p>
-                                                            <p class="text-[#909090]">(20.0 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">134/5</p>
+                                                            <p className="text-[#909090]">(20.0 overs)</p>
                                                         </div>
                                                     </div>
 
-                                                    <div class="flex space-x-2 items-start font-medium w-[162px] md:w-full">
-                                                        <div class="flex items-center space-x-1 flex-col">
-                                                            <img src="/assets/img/ipl/b-3.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">RR</span>
+                                                    <div className="flex space-x-2 items-start font-medium w-[162px] md:w-full">
+                                                        <div className="flex items-center space-x-1 flex-col">
+                                                            <img src="/assets/img/ipl/b-3.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">RR</span>
                                                         </div>
-                                                        <div class="flex items-center gap-2 mt-1">
-                                                            <p class="text-1xl font-semibold">135/2</p>
-                                                            <p class="text-[#909090]">(17.2 overs)</p>
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <p className="text-1xl font-semibold">135/2</p>
+                                                            <p className="text-[#909090]">(17.2 overs)</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
 
-                                                <div class=" font-semibold text-right">
-                                                    <p class="text-[#3D4DCF]">SRH Won</p>
+                                                <div className=" font-semibold text-right">
+                                                    <p className="text-[#3D4DCF]">SRH Won</p>
 
                                                 </div>
 
                                             </div>
                                         </div>
 
-                                        <div class="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
-                                            <p class="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
+                                        <div className="py-4 px-3 bg-[#f7faff] rounded-lg my-3 border-b-[1px] border-[#E4E9F0]">
+                                            <p className="text-[#909090] text-[12px] mb-4 font-normal">2nd Semi Final WT20 World Cup
                                                 2024
                                             </p>
-                                            <div class="flex justify-between items-center">
-                                                <div class="">
+                                            <div className="flex justify-between items-center">
+                                                <div className="">
                                                     <div
-                                                        class="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
-                                                        <div class="flex items-center space-x-1 ">
-                                                            <img src="/assets/img/ipl/b-3.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">RR</span>
+                                                        className="flex space-x-2 items-start font-medium w-[162px] md:w-full mb-3">
+                                                        <div className="flex items-center space-x-1 ">
+                                                            <img src="/assets/img/ipl/b-3.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">RR</span>
                                                         </div>
 
                                                     </div>
 
-                                                    <div class="flex space-x-2 items-start font-medium w-[162px] md:w-full">
-                                                        <div class="flex items-center space-x-1 ">
-                                                            <img src="/assets/img/ipl/b-4.png" class="h-[25px] rounded-full" alt="wiw" />
-                                                            <span class="text-[#909090]">RCB</span>
+                                                    <div className="flex space-x-2 items-start font-medium w-[162px] md:w-full">
+                                                        <div className="flex items-center space-x-1 ">
+                                                            <img src="/assets/img/ipl/b-4.png" className="h-[25px] rounded-full" alt="wiw" />
+                                                            <span className="text-[#909090]">RCB</span>
                                                         </div>
 
                                                     </div>
                                                 </div>
 
-                                                <div class="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
+                                                <div className="h-[60px] border-l-[1px] border-[#d0d3d7]"></div>
 
-                                                <div class=" font-semibold text-right">
-                                                    <p class="text-[#414143]">Final T20 on</p>
+                                                <div className=" font-semibold text-right">
+                                                    <p className="text-[#414143]">Final T20 on</p>
                                                 </div>
 
                                             </div>
@@ -1404,16 +1405,16 @@ const KKRSeries = () => {
                                 </div>
 
 
-                                <div class="rounded-lg bg-[#ffffff] p-4 mb-4">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
 
                                     <div>
 
-                                        <div class="mb-3 flex justify-between items-center">
-                                            <h3 class="text-1xl font-semibold pl-[7px] border-l-[3px] border-[#229ED3]">
+                                        <div className="mb-3 flex justify-between items-center">
+                                            <h3 className="text-1xl font-semibold pl-[7px] border-l-[3px] border-[#229ED3]">
                                                 Players
                                             </h3>
                                             {/* <!-- <div>
-                                <select class="border-[1px] rounded-sm" name="" id="">
+                                <select className="border-[1px] rounded-sm" name="" id="">
                                     <option value="">Box View</option>
                                     <option value="1">Player 1</option>
                                     <option value="2">Player 2</option>
@@ -1422,157 +1423,157 @@ const KKRSeries = () => {
                             </div> --> */}
                                         </div>
 
-                                        <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                        <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5">
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5">
                                             {/* <!-- All-Rounder Cards --> */}
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-1.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Ander Russell</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/b-2.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Ander Russell</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/b-2.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
                                             {/* <!-- Repeat similar cards for other players --> */}
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-2.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Rinku Singh</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/17.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">Batter</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Rinku Singh</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/17.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">Batter</p>
                                                 </div>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-3.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Rahmanullah G</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/1.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">Batter</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Rahmanullah G</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/1.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">Batter</p>
                                                 </div>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-4.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Sunil Narine</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/b-2.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Sunil Narine</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/b-2.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-5.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Mitchell Starc</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/2.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Mitchell Starc</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/2.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-6.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Shreyas Iyer</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/17.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Shreyas Iyer</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/17.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-7.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Phil Salt</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/b-2.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">Batter</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Phil Salt</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/b-2.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">Batter</p>
                                                 </div>
                                             </div>
 
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-8.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">S Rutheford</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/b-2.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">S Rutheford</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/b-2.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
 
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-9.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Venketesh Iyer</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/17.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Venketesh Iyer</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/17.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
 
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-10.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Varun Chakar</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/17.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Varun Chakar</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/17.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
 
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-11.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Am Ghazanfar</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/b-1.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Am Ghazanfar</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/b-1.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
 
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
                                                     <img src="/assets/img/player/b-12.png" alt="Player Image"
-                                                        class="h-[55px] mx-auto rounded-full mb-2" />
+                                                        className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Manish Pandey</h3>
-                                                <div class="flex gap-1 items-center justify-center">
-                                                    <img src="/assets/img/flag/17.png" class="h-[15px] rounded-full" alt="" />
-                                                    <p class="text-xs text-gray-600">All-Rounder</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Manish Pandey</h3>
+                                                <div className="flex gap-1 items-center justify-center">
+                                                    <img src="/assets/img/flag/17.png" className="h-[15px] rounded-full" alt="" />
+                                                    <p className="text-xs text-gray-600">All-Rounder</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1581,47 +1582,47 @@ const KKRSeries = () => {
                                 </div>
 
 
-                                <div class="rounded-lg bg-[#ffffff] p-4 mb-4">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
                                     <div>
-                                        <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                        <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                             Support Staff
                                         </h3>
-                                        <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                        <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5">
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5">
                                             {/* <!-- Bowler Cards --> */}
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
-                                                    <img src="/assets/img/staff/s-1.png" alt="Player Image" class="h-[55px] mx-auto rounded-full mb-2" />
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
+                                                    <img src="/assets/img/staff/s-1.png" alt="Player Image" className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Nathan Andrew</h3>
-                                                <p class="text-xs text-gray-600">Analyst</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Nathan Andrew</h3>
+                                                <p className="text-xs text-gray-600">Analyst</p>
                                             </div>
                                             {/* <!-- Repeat similar cards for other players --> */}
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
-                                                    <img src="/assets/img/staff/s-2.png" alt="Player Image" class="h-[55px] mx-auto rounded-full mb-2" />
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
+                                                    <img src="/assets/img/staff/s-2.png" alt="Player Image" className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Abhisheck Nayar</h3>
-                                                <p class="text-xs text-gray-600">Assistant Coach</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Abhisheck Nayar</h3>
+                                                <p className="text-xs text-gray-600">Assistant Coach</p>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
-                                                    <img src="/assets/img/staff/s-3.png" alt="Player Image" class="h-[55px] mx-auto rounded-full mb-2" />
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
+                                                    <img src="/assets/img/staff/s-3.png" alt="Player Image" className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Abhisheck Ashok</h3>
-                                                <p class="text-xs text-gray-600">Assistant Physio</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Abhisheck Ashok</h3>
+                                                <p className="text-xs text-gray-600">Assistant Physio</p>
                                             </div>
-                                            <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                <div class="relative">
-                                                    <img src="/assets/img/staff/s-4.png" alt="Player Image" class="h-[55px] mx-auto rounded-full mb-2" />
+                                            <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                <div className="relative">
+                                                    <img src="/assets/img/staff/s-4.png" alt="Player Image" className="h-[55px] mx-auto rounded-full mb-2" />
 
                                                 </div>
-                                                <h3 class="text-[14px] font-medium text-gray-800">Bharathi Arun</h3>
-                                                <p class="text-xs text-gray-600">Bowling Coach</p>
+                                                <h3 className="text-[14px] font-medium text-gray-800">Bharathi Arun</h3>
+                                                <p className="text-xs text-gray-600">Bowling Coach</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1631,61 +1632,61 @@ const KKRSeries = () => {
 
 
 
-                                <div class="rounded-lg bg-[#ffffff] p-4 mb-4">
-                                    <h3 class="text-1xl font-semibold mb-1">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
+                                    <h3 className="text-1xl font-semibold mb-1">
                                         India vs Zimbabwe 2024
                                     </h3>
-                                    <p class="text-gray-500 font-normal">The biggest tournament in the cricketing circuit, the
+                                    <p className="text-gray-500 font-normal">The biggest tournament in the cricketing circuit, the
                                         ICC T20 WORLD Cup is underway in
                                         the USAs and the West Indies. The tournament received excellent response from the fans
                                         worldwide and the finals of the gran...</p>
 
-                                    <p class="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
+                                    <p className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
                                         more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-3 ml-2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                            strokeWidth="1.5" stroke="currentColor" className="size-3 ml-2">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                 d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"></path>
                                         </svg>
                                     </p>
                                 </div>
 
-                                <div class="rounded-lg bg-[#ffffff] p-4 mb-4">
-                                    <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mb-4">
+                                    <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         News
                                     </h3>
 
-                                    <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                    <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                    <div class="lg:grid grid-cols-12 gap-4 mt-4">
+                                    <div className="lg:grid grid-cols-12 gap-4 mt-4">
                                         {/* <!-- Main News Item --> */}
 
-                                        <div class="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
+                                        <div className="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
                                             <img src="/assets/img/team-1.png" alt="Main news"
-                                                class="rounded-lg w-full h-48 object-cover mb-3" />
-                                            <h3 class="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
+                                                className="rounded-lg w-full h-48 object-cover mb-3" />
+                                            <h3 className="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
                                                 trounce</h3>
-                                            <p class="text-gray-500 font-normal">
+                                            <p className="text-gray-500 font-normal">
                                                 India will go into the home Test series against New Zealand with pretty much the
                                                 same squad that took on Bangladesh in September - India's last red-ball action
                                                 ahead
                                                 of the five-Test...
                                             </p>
 
-                                            <div class="border-l-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-l-[1px] border-[#E7F2F4]"></div>
 
                                         </div>
 
 
                                         {/* <!-- Side News Items --> */}
-                                        <div class="col-span-6">
+                                        <div className="col-span-6">
                                             {/* <!-- Single News Item --> */}
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-2.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-2.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
+                                                    <h4 className="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
                                                         Semifinal | WI-W Vs NZ-W Playing 11 Prediction</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -1695,11 +1696,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -1708,15 +1709,15 @@ const KKRSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-3.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-3.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
+                                                    <h4 className="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
                                                         Bosch Overpowers Australia To Guide South Africa.</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -1726,11 +1727,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -1739,15 +1740,15 @@ const KKRSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-4.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-4.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
+                                                    <h4 className="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
                                                         Today Match, Fantasy Cricket Tips, Pitch Report</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -1757,11 +1758,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> P Bhattachar <span class="ml-2 pr-[1px]">
+                                                    </span> P Bhattachar <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -1778,25 +1779,25 @@ const KKRSeries = () => {
 
                             </div>
 
-                            <div class="lg:col-span-4 md:col-span-5">
-                                <div class="bg-white rounded-lg p-4 mb-4">
-                                    <div class="flex gap-1 items-center justify-between">
-                                        <div class="flex gap-1 items-center">
-                                            <div class="col-span-4 relative">
-                                                <img src="/assets/img/home/trofi.png" class="h-[75px]" alt="" />
+                            <div className="lg:col-span-4 md:col-span-5">
+                                <div className="bg-white rounded-lg p-4 mb-4">
+                                    <div className="flex gap-1 items-center justify-between">
+                                        <div className="flex gap-1 items-center">
+                                            <div className="col-span-4 relative">
+                                                <img src="/assets/img/home/trofi.png" className="h-[75px]" alt="" />
                                             </div>
-                                            <div class="col-span-8 relative">
-                                                <h3 class="font-semibold text-[19px] mb-1">Weekly challenge</h3>
-                                                <p class="font-semibold text-[13px] text-[#1a80f8]"><span
-                                                    class="text-[#586577]">Time
+                                            <div className="col-span-8 relative">
+                                                <h3 className="font-semibold text-[19px] mb-1">Weekly challenge</h3>
+                                                <p className="font-semibold text-[13px] text-[#1a80f8]"><span
+                                                    className="text-[#586577]">Time
                                                     Left:</span>{" "}
                                                     2 Days 12h</p>
                                             </div>
                                         </div>
-                                        <div class="">
+                                        <div className="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-4">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                strokeWidth="1.5" stroke="currentColor" className="size-4">
+                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                     d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
                                             </svg>
 
@@ -2035,81 +2036,81 @@ const KKRSeries = () => {
                                 </div>
 
 
-                                <div class="pb-2 mb-4">
-                                    <div class="py-2">
-                                        <h3 class="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
+                                <div className="pb-2 mb-4">
+                                    <div className="py-2">
+                                        <h3 className="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
                                             POPULAR</h3>
 
                                     </div>
-                                    <div class="">
+                                    <div className="">
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2">
                                             <div>
                                                 <img src="/assets/img/1.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 ICC World cup
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/2.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 ICC Champion Trophy
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/3.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 T20 World Cup
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/4.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 Indian Premium League
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/5.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 Pakistan Super League
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/6.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 Bangladesh Premium Leaguge
                                             </div>
                                         </div>
                                         <div
-                                            class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
+                                            className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3 mb-2 ">
                                             <div>
                                                 <img src="/assets/img/7.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 Big Bash Leaguge
                                             </div>
                                         </div>
-                                        <div class="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3">
+                                        <div className="bg-[#ffffff] text-[14px] rounded-lg px-4 flex items-center space-x-3 py-3">
                                             <div>
                                                 <img src="/assets/img/8.png" alt="" />
                                             </div>
-                                            <div class="font-medium text-[#394351]">
+                                            <div className="font-medium text-[#394351]">
                                                 Super Smash
                                             </div>
                                         </div>
@@ -2119,51 +2120,51 @@ const KKRSeries = () => {
 
                                 </div>
 
-                                <div class="mb-4">
-                                    <div class="py-2">
-                                        <h3 class="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
+                                <div className="mb-4">
+                                    <div className="py-2">
+                                        <h3 className="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
                                             Fantasy Tips</h3>
                                     </div>
 
-                                    <div class="bg-[#ffffff] rounded-lg ">
-                                        <div class="p-4">
-                                            <div class=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                                                <p class="text-[13px] font-semibold">NZ-W Vs WI-W Highlights: Eden Carson,
+                                    <div className="bg-[#ffffff] rounded-lg ">
+                                        <div className="p-4">
+                                            <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
+                                                <p className="text-[13px] font-semibold">NZ-W Vs WI-W Highlights: Eden Carson,
                                                     Amelia
                                                     Kerr Pummel West
                                                     Indies In Semis As NZ Set Date With SA</p>
-                                                <p class="text-[#586577] pt-2">15 hrs ago</p>
+                                                <p className="text-[#586577] pt-2">15 hrs ago</p>
 
                                             </div>
-                                            <div class=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                                                <p class="text-[13px] font-semibold">Probably Took Wrong Risk': Alyssa Healy
+                                            <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
+                                                <p className="text-[13px] font-semibold">Probably Took Wrong Risk': Alyssa Healy
                                                     Regrets
                                                     Sitting Out
                                                     As SA Stuns AUS In T20 WC</p>
-                                                <p class="text-[#586577] pt-2">17 hrs ago</p>
+                                                <p className="text-[#586577] pt-2">17 hrs ago</p>
 
                                             </div>
-                                            <div class=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                                                <p class="text-[13px] font-semibold">Women's T20 World Cup, NZ vs WI: Unchanged
+                                            <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
+                                                <p className="text-[13px] font-semibold">Women's T20 World Cup, NZ vs WI: Unchanged
                                                     New
                                                     Zealand Opt To
                                                     Bat; Check Out The Playing XIs</p>
-                                                <p class="text-[#586577] pt-2">19 hrs ago</p>
+                                                <p className="text-[#586577] pt-2">19 hrs ago</p>
 
                                             </div>
-                                            <div class=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
-                                                <p class="text-[13px] font-semibold">SA Cricketers Get Emotional After Historic
+                                            <div className=" pb-2 mb-4 border-b-[1px] border-border-gray-700 ">
+                                                <p className="text-[13px] font-semibold">SA Cricketers Get Emotional After Historic
                                                     Win
                                                     Against
                                                     Australia To Enter T20 World Cup 2024 Final - Watch</p>
-                                                <p class="text-[#586577] pt-2">18 Oct 2024</p>
+                                                <p className="text-[#586577] pt-2">18 Oct 2024</p>
 
                                             </div>
-                                            <div class=" pb-2 mb-2">
-                                                <p class="text-[13px] font-semibold">'Probably Took Wrong Risk': Alyssa Healy
+                                            <div className=" pb-2 mb-2">
+                                                <p className="text-[13px] font-semibold">'Probably Took Wrong Risk': Alyssa Healy
                                                     Regrets Sitting Out
                                                     As SA Stuns AUS In T20 WC</p>
-                                                <p class="text-[#586577] pt-2">18 Oct 2024</p>
+                                                <p className="text-[#586577] pt-2">18 Oct 2024</p>
                                             </div>
                                         </div>
                                     </div>
@@ -2669,7 +2670,7 @@ const KKRSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -2916,7 +2917,7 @@ const KKRSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -3419,7 +3420,7 @@ const KKRSeries = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
                                                         <p className="text-[#0B773C] font-semibold mt-1 text-[13px] w-[75%] text-center">
@@ -3665,7 +3666,7 @@ const KKRSeries = () => {
                                                         </div>
                                                     </div>
                                                     {"{"}/*{" "}
-                                                    {/* <div class="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}{" "}
+                                                    {/* <div className="h-[100px] border-l-[1px] border-[#d0d3d7]"></div> */}{" "}
                                                     */{"}"}
                                                     <div className=" font-semibold flex flex-col items-center">
                                                         <img src="/assets/img/home/win.png" alt="" />
@@ -3914,182 +3915,182 @@ const KKRSeries = () => {
                     </div>
                     {/* <!-- Scorecard Tab --> */}
                     <div id="squads" className={`tab-content ${activeTab === 'squads' ? '' : 'hidden'}`}>
-                        <div class="py-2 mb-2">
-                            <h3 class="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
+                        <div className="py-2 mb-2">
+                            <h3 className="text-1xl font-semibold pl-[3px] border-l-[3px] border-[#1a80f8]">
                                 WT20 World Cup 2024 Squads
                             </h3>
                         </div>
 
 
 
-                        <div class="md:grid grid-cols-12 gap-4">
-                            <div class="lg:col-span-4 md:col-span-5">
-                                <div class="rounded-lg p-2 mb-4 bg-[#ffffff]">
-                                    <div id="team-buttons" class="">
+                        <div className="md:grid grid-cols-12 gap-4">
+                            <div className="lg:col-span-4 md:col-span-5">
+                                <div className="rounded-lg p-2 mb-4 bg-[#ffffff]">
+                                    <div id="team-buttons" className="">
 
                                         <button
-                                            // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                            // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "aus-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("aus-team")}
                                         // data-target="aus-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Afghanistan Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Afghanistan Flag" />
                                             Australia-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "ind-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("ind-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="ind-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             India-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "eng-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("eng-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="eng-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             England-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "south-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("south-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center active"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center active"
                                         // data-target="south-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             South Africa-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "nz-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("nz-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="nz-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             New Zealand-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "sri-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("sri-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="sri-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Sri Lanka-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "west-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("west-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="west-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             West Indies-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "ban-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("ban-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="ban-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Bangladesh-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "pak-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("pak-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="pak-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Pakistan-W
                                         </button>
                                         <button
                                             className={`team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center ${activeTeam === "Scot-team" ? "bg-[#ecf2fd] rounded-md text-[#1a80f8] active" : ""}`}
                                             onClick={() => handleTeamChange("Scot-team")}
-                                        // class="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
+                                        // className="team-btn border-b px-2 py-3 w-full text-[#394351] font-medium flex items-center"
                                         // data-target="Scot-team"
                                         >
-                                            <img src="/assets/img/flag/1.png" class="mr-3" alt="Bangladesh Flag" />
+                                            <img src="/assets/img/flag/1.png" className="mr-3" alt="Bangladesh Flag" />
                                             Scotland-W
                                         </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="lg:col-span-8 md:col-span-7">
+                            <div className="lg:col-span-8 md:col-span-7">
                                 <div id="aus-team" className={`team-content ${activeTeam === "aus-team" ? "" : "hidden"}`}>
                                     <p>I am Afg Team</p>
                                 </div>
 
                                 <div id="south-team" className={`team-content ${activeTeam === "south-team" ? "" : "hidden"}`}>
-                                    <div class="max-w-7xl mx-auto bg-white rounded-lg p-6">
-                                        <div class="flex items-center space-x-4 mb-6">
-                                            <img src="/assets/img/flag/b-5.png" alt="South Africa Flag" class="h-[45px] rounded-full" />
-                                            <h1 class="text-[16px] font-semibold text-gray-800">South Africa Women <span
-                                                class="text-gray-500">(15 players)</span></h1>
+                                    <div className="max-w-7xl mx-auto bg-white rounded-lg p-6">
+                                        <div className="flex items-center space-x-4 mb-6">
+                                            <img src="/assets/img/flag/b-5.png" alt="South Africa Flag" className="h-[45px] rounded-full" />
+                                            <h1 className="text-[16px] font-semibold text-gray-800">South Africa Women <span
+                                                className="text-gray-500">(15 players)</span></h1>
                                         </div>
 
 
-                                        <div class="space-y-6">
+                                        <div className="space-y-6">
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     Batsman</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-7.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-blue-500 ">L Wolvaardt<span
-                                                            class="text-blue-500">(c)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-blue-500 ">L Wolvaardt<span
+                                                            className="text-blue-500">(c)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-8.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">T Brits</h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">T Brits</h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-9.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-blue-500">M Ridder<span
-                                                            class="text-blue-500">(wk)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-blue-500">M Ridder<span
+                                                            className="text-blue-500">(wk)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-10.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">S Jafta<span
-                                                            class="text-blue-500">(wk)</span></h3>
-                                                        <p class="text-xs text-gray-600">Batsman</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">S Jafta<span
+                                                            className="text-blue-500">(wk)</span></h3>
+                                                        <p className="text-xs text-gray-600">Batsman</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4097,54 +4098,54 @@ const KKRSeries = () => {
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     Bowler</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-11.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Hlubi</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Hlubi</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-12.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Khaka</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Khaka</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-13.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">N Mlaba</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">N Mlaba</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-14.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/ball.png"
-                                                                class="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[24px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">T Sekhukhune</h3>
-                                                        <p class="text-xs text-gray-600">Bowler</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">T Sekhukhune</h3>
+                                                        <p className="text-xs text-gray-600">Bowler</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4152,130 +4153,130 @@ const KKRSeries = () => {
 
                                             <div>
                                                 <h2
-                                                    class="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
+                                                    className="text-1xl font-semibold pl-[5px] border-l-[3px] border-[#1a80f8] mb-4">
                                                     All-Rounder</h2>
-                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-15.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Bosch</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Bosch</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
 
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-16.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">N Klerk</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">N Klerk</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-17.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">A Dercksen</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">A Dercksen</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-18.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-19.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-20.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
-                                                    <div class="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
-                                                        <div class="relative">
+                                                    <div className="text-center p-4 rounded-md border-[1px] border-[##E2E2E2]">
+                                                        <div className="relative">
                                                             <img src="/assets/img/player/g-21.png" alt="Player Image"
-                                                                class="w-16 h-16 mx-auto rounded-full mb-2" />
+                                                                className="w-16 h-16 mx-auto rounded-full mb-2" />
                                                             <img src="/assets/img/player/bat-ball.png"
-                                                                class="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
+                                                                className="h-[27px] absolute right-2 bottom-0 bg-white rounded-full p-[4px]"
                                                                 alt="" />
                                                         </div>
-                                                        <h3 class="text-sm font-semibold text-gray-800">M Kapp</h3>
-                                                        <p class="text-xs text-gray-600">All-Rounder</p>
+                                                        <h3 className="text-sm font-semibold text-gray-800">M Kapp</h3>
+                                                        <p className="text-xs text-gray-600">All-Rounder</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="rounded-lg bg-[#ffffff] p-4 mt-4">
-                                    <h3 class="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
+                                <div className="rounded-lg bg-[#ffffff] p-4 mt-4">
+                                    <h3 className="text-1xl font-semibold mb-2 pl-[7px] border-l-[3px] border-[#229ED3]">
                                         News
                                     </h3>
 
-                                    <div class="border-t-[1px] border-[#E4E9F0]"></div>
+                                    <div className="border-t-[1px] border-[#E4E9F0]"></div>
 
-                                    <div class="lg:grid grid-cols-12 gap-4 mt-4">
+                                    <div className="lg:grid grid-cols-12 gap-4 mt-4">
 
 
-                                        <div class="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
+                                        <div className="col-span-6 border-r-[1px] border-[#E7F2F4] pr-[16px]">
                                             <img src="/assets/img/team-1.png" alt="Main news"
-                                                class="rounded-lg w-full h-48 object-cover mb-3" />
-                                            <h3 class="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
+                                                className="rounded-lg w-full h-48 object-cover mb-3" />
+                                            <h3 className="text-1xl font-semibold mb-1">Live - Jagadeesan hits a century; Haryana
                                                 trounce</h3>
-                                            <p class="text-gray-500 font-normal">
+                                            <p className="text-gray-500 font-normal">
                                                 India will go into the home Test series against New Zealand with pretty much the
                                                 same squad that took on Bangladesh in September - India's last red-ball action
                                                 ahead
                                                 of the five-Test...
                                             </p>
 
-                                            <div class="border-l-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-l-[1px] border-[#E7F2F4]"></div>
 
                                         </div>
 
 
 
-                                        <div class="col-span-6">
+                                        <div className="col-span-6">
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-2.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-2.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
+                                                    <h4 className="text-[13px] font-semibold mb-2">Women's T20 World Cup, 2nd
                                                         Semifinal | WI-W Vs NZ-W Playing 11 Prediction</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4285,11 +4286,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4298,15 +4299,15 @@ const KKRSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-3.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-3.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
+                                                    <h4 className="text-[13px] font-semibold mb-2">AUS-W Vs SA-W Highlights: Anneke
                                                         Bosch Overpowers Australia To Guide South Africa.</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4316,11 +4317,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> Akshita Patel <span class="ml-2 pr-[1px]">
+                                                    </span> Akshita Patel <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4329,15 +4330,15 @@ const KKRSeries = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                            <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                            <div class="flex gap-3 my-3">
-                                                <img src="/assets/img/team-4.png" alt="News thumbnail" class="rounded-lg h-[77px]" />
+                                            <div className="flex gap-3 my-3">
+                                                <img src="/assets/img/team-4.png" alt="News thumbnail" className="rounded-lg h-[77px]" />
                                                 <div>
-                                                    <h4 class="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
+                                                    <h4 className="text-[13px] font-semibold mb-2">WI-W vs NZ-W Dream11 Prediction
                                                         Today Match, Fantasy Cricket Tips, Pitch Report</h4>
-                                                    <p class="text-[12px] text-gray-500 flex items-center"><span
-                                                        class="ml-2 pr-[1px]">
+                                                    <p className="text-[12px] text-gray-500 flex items-center"><span
+                                                        className="ml-2 pr-[1px]">
                                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                             height="15" viewBox="0 0 48 48">
                                                             <polygon fill="#42a5f5"
@@ -4347,11 +4348,11 @@ const KKRSeries = () => {
                                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                             </polygon>
                                                         </svg>
-                                                    </span> P Bhattachar <span class="ml-2 pr-[1px]">
+                                                    </span> P Bhattachar <span className="ml-2 pr-[1px]">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                                class="size-3">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                                className="size-3">
+                                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                                 </path>
                                                             </svg>
@@ -4371,14 +4372,14 @@ const KKRSeries = () => {
                     <div id="pointstable" className={`tab-content ${activeTab === 'pointstable' ? '' : 'hidden'}`}>jhds</div>
                     {/* <!-- Points Table Tab --> */}
                     <div id="news" className={`tab-content ${activeTab === 'news' ? '' : 'hidden'}`}>
-                        <div class="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
-                            <div class="lg:grid grid-cols-12 gap-4">
-                                <div class="col-span-6 ">
-                                    <img src="/assets/img/team-1.png" alt="Main news" class="rounded-lg w-full h-48 object-cover mb-3" />
+                        <div className="rounded-lg py-4 px-4 bg-[#ffffff] mb-4">
+                            <div className="lg:grid grid-cols-12 gap-4">
+                                <div className="col-span-6 ">
+                                    <img src="/assets/img/team-1.png" alt="Main news" className="rounded-lg w-full h-48 object-cover mb-3" />
                                 </div>
-                                <div class="col-span-6">
-                                    <p class="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
-                                        class="ml-2 pr-[1px]">
+                                <div className="col-span-6">
+                                    <p className="text-gray-500 font-normal text-[13px] mb-2 flex items-center">By <span
+                                        className="ml-2 pr-[1px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
                                             viewBox="0 0 48 48">
                                             <polygon fill="#42a5f5"
@@ -4388,24 +4389,24 @@ const KKRSeries = () => {
                                                 points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                             </polygon>
                                         </svg>
-                                    </span> Uc Team <span class="ml-2 pr-[1px]">
+                                    </span> Uc Team <span className="ml-2 pr-[1px]">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                <path strokeLinecap="round" strokeLinejoin="round"
                                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                 </path>
                                             </svg>
                                         </span> October 9, 2024</p>
-                                    <h3 class="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live - Jagadeesan hits
+                                    <h3 className="text-1xl font-semibold mb-1" style={{ lineHeight: "21px" }}>Live - Jagadeesan hits
                                         a century; Haryana trounce
                                     </h3>
-                                    <p class="text-gray-500 font-normal">India will go into the home Test series
+                                    <p className="text-gray-500 font-normal">India will go into the home Test series
                                         against New Zealand with pretty much the same squad that took on Bangladesh in September
                                         - India's last red-ball action ahead of the five-Test...</p>
-                                    <p class="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
+                                    <p className="text-[#1A80F8] font-semibold flex items-center text-[13px] pt-2 underline">Read
                                         more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-3 ml-2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                            strokeWidth="1.5" stroke="currentColor" className="size-3 ml-2">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
                                                 d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"></path>
                                         </svg>
                                     </p>
@@ -4413,17 +4414,17 @@ const KKRSeries = () => {
                             </div>
 
 
-                            <div class="lg:grid grid-cols-12 gap-4">
+                            <div className="lg:grid grid-cols-12 gap-4">
 
-                                <div class="col-span-6">
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                <div className="col-span-6">
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                            <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                 series in Australia to close out this year.into the home Test series
                                                 against</h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4433,10 +4434,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4444,16 +4445,16 @@ const KKRSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to opt
+                                            <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to opt
                                                 central contract this is cricket
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4463,10 +4464,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4475,16 +4476,16 @@ const KKRSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                            <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                 really took off, they have some reflecting to do.
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4494,10 +4495,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4507,15 +4508,15 @@ const KKRSeries = () => {
                                     </div>
                                 </div>
 
-                                <div class="col-span-6">
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                <div className="col-span-6">
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-1.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Action ahead of the five-Test
+                                            <h4 className="text-[13px] font-semibold mb-2">Action ahead of the five-Test
                                                 series in Australia to close out this year.into the home Test series
                                                 against</h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4525,10 +4526,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4536,16 +4537,16 @@ const KKRSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-2.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">Star South African spinner to opt
+                                            <h4 className="text-[13px] font-semibold mb-2">Star South African spinner to opt
                                                 central contract this is cricket
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4555,10 +4556,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4567,16 +4568,16 @@ const KKRSeries = () => {
                                         </div>
                                     </div>
 
-                                    <div class="border-t-[1px] border-[#E7F2F4]"></div>
+                                    <div className="border-t-[1px] border-[#E7F2F4]"></div>
 
-                                    <div class="flex gap-3 my-5">
-                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" class="rounded-lg h-[90px]" />
+                                    <div className="flex gap-3 my-5">
+                                        <img src="/assets/img/flag/p-3.png" alt="News thumbnail" className="rounded-lg h-[90px]" />
                                         <div>
-                                            <h4 class="text-[13px] font-semibold mb-2">After a campaign that never
+                                            <h4 className="text-[13px] font-semibold mb-2">After a campaign that never
                                                 really took off, they have some reflecting to do.
                                             </h4>
-                                            <p class="text-[12px] text-gray-500 flex items-center">By <span
-                                                class="ml-2 pr-[1px]">
+                                            <p className="text-[12px] text-gray-500 flex items-center">By <span
+                                                className="ml-2 pr-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15"
                                                     height="15" viewBox="0 0 48 48">
                                                     <polygon fill="#42a5f5"
@@ -4586,10 +4587,10 @@ const KKRSeries = () => {
                                                         points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926">
                                                     </polygon>
                                                 </svg>
-                                            </span> Uc Team <span class="ml-2 pr-[1px]">
+                                            </span> Uc Team <span className="ml-2 pr-[1px]">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        stroke-width="1.5" stroke="currentColor" class="size-3">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                        strokeWidth="1.5" stroke="currentColor" className="size-3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
                                                             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z">
                                                         </path>
                                                     </svg>
@@ -4602,10 +4603,10 @@ const KKRSeries = () => {
                             </div>
 
                             <div
-                                class="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
+                                className="text-[#1A80F8] font-semibold flex items-center justify-center text-[13px] pt-2 underline">
                                 More from News <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-3 ml-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                    strokeWidth="1.5" stroke="currentColor" className="size-3 ml-2">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
                                         d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"></path>
                                 </svg>
                             </div>
